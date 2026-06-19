@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>OD2 Unit 1 | Amazing Animals</title>
+  <style>
+@import url('https://fonts.loli.net/css2?family=Baloo+2:wght@600;700;800;900&family=Nunito:wght@700;800;900&display=swap');
+:root{--duo-green:#58CC02;--duo-green-dark:#46A302;--duo-green-light:#E9F8DF;--duo-blue:#1CB0F6;--duo-blue-dark:#0878D6;--duo-blue-light:#DDF4FF;--duo-pink:#f8b7d0;--duo-pink-soft:#f9e0de;--duo-red:#FF4B4B;--duo-red-dark:#D62B2B;--duo-red-light:#FFE5E5;--duo-purple:#CE82FF;--duo-purple-dark:#8A3FB0;--duo-yellow:#FFC800;--duo-text:#4B4B4B;--duo-text-soft:#777;--duo-border:#E5E5E5;--duo-bg:#fff;--duo-bg-soft:#F7F7F7;--radius-sm:12px;--radius-md:16px;--radius-lg:24px;}
+*{margin:0;padding:0;box-sizing:border-box;}html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;}body{font-family:'Nunito','Baloo 2','PingFang SC','Microsoft YaHei',sans-serif;color:var(--duo-text);font-size:17px;line-height:1.6;background:#fff;}img{max-width:100%;height:auto;display:block;}a{text-decoration:none;color:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}.page{max-width:900px;margin:0 auto;padding:24px 16px 60px;min-width:0;}.lang-switch{display:flex;justify-content:flex-end;gap:12px;margin-bottom:20px;}.lang-switch a{text-decoration:none;border-radius:999px;padding:8px 16px;font-size:15px;font-weight:800;border:2px solid var(--duo-border);border-bottom-width:4px;background:var(--duo-bg);color:var(--duo-text-soft);}.lang-switch a.active{background:var(--duo-blue);color:#fff;border-color:var(--duo-blue-dark);}
+.hero{background:#7bd5df;border:2px solid var(--duo-border);border-bottom-width:6px;border-radius:var(--radius-lg);color:var(--duo-text);padding:32px 24px;text-align:center;overflow:hidden;}.hero h1{font-family:'Baloo 2',sans-serif;font-size:42px;font-weight:900;line-height:1.15;margin-bottom:8px;text-shadow:2px 2px 0 #fff;overflow-wrap:anywhere;}.hero .sub{display:inline-block;max-width:100%;font-size:18px;font-weight:900;background:rgba(255,255,255,.5);border:2px solid rgba(255,255,255,.75);border-bottom-width:4px;border-radius:999px;padding:8px 16px;color:#fff;margin-bottom:14px;}.teacher-box{max-width:100%;font-size:16px;font-weight:900;background:rgba(255,255,255,.38);border:2px solid rgba(255,255,255,.75);border-bottom-width:4px;border-radius:var(--radius-md);padding:12px 20px;overflow-wrap:anywhere;}
+.map{margin-top:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}.map-item{min-width:0;background:var(--duo-bg);border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);padding:16px 12px;text-align:center;}.map-item .k{color:var(--duo-text-soft);font-size:14px;font-weight:900;text-transform:uppercase;}.map-item .v{margin-top:6px;color:var(--duo-text);font-size:18px;font-weight:900;overflow-wrap:anywhere;}.section{margin-top:40px;}.section h2{font-family:'Baloo 2',sans-serif;color:var(--duo-text);font-size:32px;font-weight:900;margin-bottom:8px;}.lead{color:var(--duo-text-soft);font-size:18px;font-weight:800;margin-bottom:16px;}.purpose{margin-bottom:20px;background:var(--duo-pink-soft);border:2px solid var(--duo-pink);border-bottom-width:4px;border-radius:var(--radius-md);padding:12px 16px;font-size:16px;color:var(--duo-text);font-weight:900;overflow-wrap:anywhere;}.card{min-width:0;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;overflow:hidden;}.card .h{padding:14px 16px;font-size:18px;font-weight:900;color:var(--duo-text);background:var(--duo-bg-soft);border-bottom:2px solid var(--duo-border);}.card .b{padding:16px;}.chips{display:flex;flex-wrap:wrap;gap:8px;}.chip,.summary-pill{display:inline-flex;border-radius:999px;padding:6px 12px;font-size:14px;font-weight:900;border:2px solid var(--duo-border);background:#fff;color:var(--duo-text);text-align:center;white-space:nowrap;}
+.image-card{border:2px solid var(--duo-blue);border-bottom-width:4px;border-radius:var(--radius-md);background:var(--duo-blue-light);padding:10px;}.image-card img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--duo-pink-soft);background:#fff;}.caption{margin-top:8px;color:var(--duo-blue-dark);font-size:14px;font-weight:900;}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;}.three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}.sort-label{font-size:16px;font-weight:900;color:var(--duo-text-soft);margin-bottom:12px;}.bank{border:2px dashed #BDBDBD;border-radius:var(--radius-md);background:var(--duo-bg-soft);padding:12px;min-height:82px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;}.zones{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}.zone{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:12px;min-height:150px;}.zone h3{font-size:18px;font-weight:900;margin-bottom:8px;color:var(--duo-blue-dark);}.zone small{display:block;color:var(--duo-text-soft);font-weight:800;margin-bottom:10px;}.items{display:flex;flex-wrap:wrap;gap:8px;min-height:54px;}.drag-chip{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:2px solid var(--duo-border);border-bottom-width:4px;background:#fff;padding:8px 13px;font-size:14px;font-weight:900;color:var(--duo-text);cursor:grab;user-select:none;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}.drag-chip.dragging{opacity:.55;}.drag-chip.tap-selected{border-color:var(--duo-blue);background:var(--duo-blue-light);color:var(--duo-blue-dark);box-shadow:0 0 0 3px rgba(28,176,246,.18);}.drop-zone.over,.drop-zone.tap-ready,.blank.over,.blank.tap-ready{background:var(--duo-blue-light);border-color:var(--duo-blue);}.drag-chip.good,.blank.good{border-color:var(--duo-green);background:var(--duo-green-light);color:var(--duo-green-dark);}.drag-chip.bad,.blank.bad{border-color:var(--duo-red);background:var(--duo-red-light);color:var(--duo-red-dark);}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;}.btn-main,.btn-sub,.nav a{border:2px solid;border-bottom-width:4px;border-radius:var(--radius-md);padding:12px 22px;font-size:16px;font-weight:900;cursor:pointer;transition:all .1s;text-decoration:none;}.btn-main{background:var(--duo-green);border-color:var(--duo-green-dark);color:#fff;}.btn-sub{background:#fff;border-color:var(--duo-border);color:var(--duo-text-soft);}.btn-main:active,.btn-sub:active,.nav a:active,.lang-switch a:active{border-bottom-width:2px;transform:translateY(2px);}.report{margin-top:16px;border:2px solid var(--duo-blue-dark);background:var(--duo-blue-light);border-radius:var(--radius-sm);padding:12px 16px;color:var(--duo-blue-dark);font-size:16px;font-weight:900;}.skill-card,.guide-card,.rule-card{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:14px 16px;}.skill-card{background:var(--duo-blue-light);border-color:var(--duo-blue);color:var(--duo-blue-dark);font-weight:900;}.guide-card strong,.rule-card strong,.skill-card strong{display:block;font-size:18px;font-weight:900;margin-bottom:6px;color:var(--duo-purple-dark);}.guide-card p,.rule-card p{font-size:15px;font-weight:800;color:var(--duo-text);margin:6px 0;}.rule-card code{color:var(--duo-blue-dark);font-weight:900;}.compare-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}.compare-card{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:14px;}.compare-card h3{font-size:17px;font-weight:900;color:var(--duo-blue-dark);margin-bottom:8px;}.sentence-list{display:grid;gap:12px;}.sentence{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:14px 16px;font-weight:900;line-height:1.75;}.blank{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-width:150px;min-height:42px;margin:0 4px;padding:4px 8px;border:2px dashed #BDBDBD;border-radius:var(--radius-sm);background:var(--duo-bg-soft);}.blank::before{content:attr(data-placeholder);color:var(--duo-text-soft);font-size:14px;font-weight:900;}.blank.filled::before{content:'';display:none;}.blank .drag-chip{white-space:normal;text-align:center;line-height:1.25;}.dialogue{display:grid;gap:10px;}.bubble{max-width:80%;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:20px;background:#fff;padding:12px 16px;font-weight:900;}.bubble:nth-child(even){margin-left:auto;background:var(--duo-blue-light);border-color:var(--duo-blue);}.writing-layout{display:grid;gap:16px;}.frame-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.frame-grid div{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-sm);background:var(--duo-bg-soft);padding:10px 12px;}.frame-grid strong{display:block;color:var(--duo-text);font-size:15px;font-weight:900;margin-bottom:4px;}.frame-grid span{display:block;color:var(--duo-blue-dark);font-size:15px;font-weight:900;line-height:1.4;}.paper-submit{border:2px dashed var(--duo-blue);border-bottom-width:4px;border-radius:var(--radius-md);background:var(--duo-blue-light);padding:16px;color:var(--duo-blue-dark);font-weight:900;}.paper-submit strong{display:block;font-size:20px;margin-bottom:6px;}.summary{background:var(--duo-green);border:2px solid var(--duo-green-dark);border-bottom-width:6px;border-radius:var(--radius-lg);padding:24px;color:#fff;}.summary h2{color:#fff;}.summary-lead{color:#fff;font-size:18px;font-weight:900;margin-bottom:16px;}.summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px;}.summary-card{min-width:0;background:#fff;color:var(--duo-text);border:2px solid var(--duo-green-dark);border-bottom-width:4px;border-radius:var(--radius-md);padding:14px 16px;}.summary-card .h{font-size:18px;font-weight:900;margin-bottom:8px;color:var(--duo-green-dark);}.summary-card p{font-size:15px;font-weight:800;color:var(--duo-text);margin:0;}.summary-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}.summary-pill{border-color:var(--duo-green);background:var(--duo-green-light);color:var(--duo-green-dark);padding:3px 9px;}.summary-check{margin-top:16px;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.55);border-bottom-width:4px;border-radius:var(--radius-md);padding:12px 16px;font-weight:900;}.nav{margin-top:32px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}.nav .back{border-color:var(--duo-border);color:var(--duo-text-soft);background:#fff;}.nav .next{border-color:var(--duo-blue-dark);color:#fff;background:var(--duo-blue);}footer{margin-top:24px;text-align:center;font-size:14px;font-weight:700;color:var(--duo-text-soft);}
+@media(pointer:coarse){body{font-size:18px;}.page{padding:calc(18px + env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) calc(64px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));}.btn-main,.btn-sub,.nav a,.lang-switch a{min-height:48px;display:inline-flex;align-items:center;justify-content:center;}.bank{min-height:104px;}.items{min-height:72px;}.drag-chip{font-size:15px;padding:9px 14px;}.blank{min-height:48px;}}@media(max-width:860px){.map{grid-template-columns:repeat(2,minmax(0,1fr));}.two-col,.three-col,.zones,.compare-grid,.frame-grid,.summary-grid{grid-template-columns:minmax(0,1fr);}.hero h1{font-size:32px;}.section h2{font-size:28px;}.blank{min-width:140px;}.chip,.drag-chip{font-size:13px;}}@media(max-width:480px){body{overflow-x:hidden;}.page{padding:16px 12px 48px;overflow:hidden;}.lang-switch{justify-content:center;flex-wrap:wrap;}.hero{padding:24px 14px;}.hero h1{font-size:30px;}.hero .sub{font-size:17px;}.teacher-box{font-size:14px;padding:10px 12px;}.blank{display:inline-flex;width:100%;margin:8px 0;}.sentence{line-height:1.75;}.bubble{max-width:100%;}.summary{padding:20px 14px;}}
+  
+.site-floating-wrap{display:contents;}
+.site-float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}
+.site-float-left{left:18px;top:214px;}
+.site-float-right{right:18px;top:204px;}
+.site-float-panel h3{text-align:center;font-family:var(--display-font,'Baloo 2','PingFang SC','Microsoft YaHei',sans-serif);font-size:16px;font-weight:900;color:rgb(192,136,128);margin:0;}
+.site-float-panel p{margin-top:6px;text-align:center;color:var(--soft,var(--duo-text-soft,#777));font-size:12px;font-weight:900;line-height:1.35;}
+.site-qr-box{width:102px;height:102px;margin:10px auto 8px;border:6px solid #fff;border-radius:14px;background:#fff;box-shadow:0 0 0 2px rgba(248,200,208,.72);object-fit:cover;}
+.site-consult-list{display:grid;gap:8px;margin-top:10px;}
+.site-consult-item{min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(248,200,208,.14);font-size:14px;font-weight:900;transition:transform .16s ease,background .16s ease,box-shadow .16s ease;}
+.site-consult-item:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(192,136,128,.12);background:rgba(248,200,208,.26);}
+.site-consult-item.active{background:rgba(248,200,208,.42);color:var(--text,var(--duo-text,#4B4B4B));}
+.site-consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
+@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-float-right .site-consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.site-qr-box{width:112px;height:112px;}}
+@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}.site-float-right .site-consult-list{grid-template-columns:minmax(0,1fr);}}
+
+</style>
+</head>
+<body>
+<div class="page" id="top">
+  <div class="lang-switch"><a class="active" href="#top">English</a><a href="../../levels/od-level-2.html">OD Level 2</a></div>
+
+  <section class="hero">
+    <h1>Unit 1 Amazing Animals</h1>
+    <p class="sub">Compare animal groups and describe amazing body parts.</p>
+    <div class="teacher-box">Unit goal: name animal body parts, read a mind map, compare and contrast animal groups, use pronouns, and write about a favorite animal group on paper.</div>
+  </section>
+
+  <div class="map" aria-label="Learning map">
+    <div class="map-item"><div class="k">Words</div><div class="v">Animal Body Parts</div></div>
+    <div class="map-item"><div class="k">Reading</div><div class="v">Review &amp; Retell</div></div>
+    <div class="map-item"><div class="k">Grammar</div><div class="v">Pronouns</div></div>
+    <div class="map-item"><div class="k">Writing</div><div class="v">Favorite Group</div></div>
+  </div>
+
+  <section class="section">
+    <h2>1 Key Vocabulary</h2>
+    <div class="purpose">Goal: read the key words, then tap or drag each word into the correct group.</div>
+    <div class="two-col">
+      <figure class="image-card">
+        <img src="assets/animal-groups-vocabulary.png" alt="Animal body parts vocabulary: skin, mammals, eggs, amphibians, scales, gills, feathers, wings, fur">
+        <figcaption class="caption">Picture Words 1: body covering and animal groups.</figcaption>
+      </figure>
+      <figure class="image-card">
+        <img src="assets/animal-body-parts-vocabulary.png" alt="Animal body parts vocabulary: ears, mouth, head, body, legs, eyes">
+        <figcaption class="caption">Picture Words 2: hamster body parts.</figcaption>
+      </figure>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="h">Sort the Vocabulary</div>
+      <div class="b">
+        <div class="sort-label">Word Bank</div>
+        <div class="bank drop-zone" id="vocabBank" data-zone="bank"></div>
+        <div class="zones">
+          <div class="zone drop-zone" data-zone="covering"><h3>Body Covering</h3><small>Things on the outside of the body.</small><div class="items"></div></div>
+          <div class="zone drop-zone" data-zone="body-parts"><h3>Body Parts</h3><small>Parts animals use to see, hear, move, or eat.</small><div class="items"></div></div>
+          <div class="zone drop-zone" data-zone="animal-groups"><h3>Animal Groups</h3><small>Groups from the reading.</small><div class="items"></div></div>
+          <div class="zone drop-zone" data-zone="water-life"><h3>Water Life</h3><small>Words that help animals live in water.</small><div class="items"></div></div>
+        </div>
+        <div class="actions"><button class="btn-main" id="vocabCheckBtn">Check Sort</button><button class="btn-sub" id="vocabResetBtn">Shuffle Again</button></div>
+        <div class="report" id="vocabReport">Words left: 16 (done 0 / 16)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2 Knowledge List Guide</h2>
+    <div class="purpose">Goal: review the text clues and sort the ideas in your mind by animal group, body covering, movement, and babies.</div>
+    <div class="two-col">
+      <div class="skill-card"><strong>Reading Skill: Compare</strong>To compare things, tell how they are the same. Birds and fish both lay eggs.</div>
+      <div class="skill-card"><strong>Reading Skill: Contrast</strong>To contrast things, tell how they are different. Birds have feathers, but fish have scales and gills.</div>
+    </div>
+    <div class="compare-grid" style="margin-top:16px;">
+      <div class="compare-card"><h3>Animal Groups</h3><p>Birds, fish, amphibians, and mammals are different groups.</p><p>Each group has special body parts.</p></div>
+      <div class="compare-card"><h3>Body Covering</h3><p>Birds have feathers. Fish have scales.</p><p>Mammals have hair or fur.</p></div>
+      <div class="compare-card"><h3>Babies</h3><p>Birds lay hard-shell eggs.</p><p>Fish and amphibians lay soft eggs in water.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>3 Mind Map Workshop</h2>
+    <div class="purpose">Goal: use the mind map to explain how birds, fish, amphibians, and mammals are amazing in different ways.</div>
+    <figure class="image-card">
+      <img src="unit-01-mind-map.png" alt="OD2 Unit 1 Amazing Animals mind map">
+      <figcaption class="caption">Mind Map: birds, fish, amphibians, and mammals.</figcaption>
+    </figure>
+    <div class="compare-grid" style="margin-top:16px;">
+      <div class="compare-card"><h3>Retell</h3><p>Animals can breathe and move, but they are different in many ways.</p></div>
+      <div class="compare-card"><h3>Compare</h3><p>Birds, fish, and amphibians lay eggs. Mammal babies drink milk.</p></div>
+      <div class="compare-card"><h3>Contrast</h3><p>Birds use wings. Fish use gills and fins. Frogs use legs to jump on land.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>4 Grammar and Expression</h2>
+    <div class="purpose">Goal: use subject and object pronouns to make animal sentences shorter and clearer.</div>
+    <div class="two-col">
+      <figure class="image-card">
+        <img src="assets/subject-object-pronouns-chart.png" alt="Subject and object pronouns grammar chart">
+        <figcaption class="caption">Grammar list: I, you, he, she, it, we, they / me, you, him, her, it, us, them.</figcaption>
+      </figure>
+      <div class="card">
+        <div class="h">Rule Cards</div>
+        <div class="b">
+          <div class="three-col">
+            <div class="rule-card"><strong>Subject</strong><p>Use before the verb.</p><p><code>They</code> have wings.</p></div>
+            <div class="rule-card"><strong>Object</strong><p>Use after the verb.</p><p>Look at <code>them</code>.</p></div>
+            <div class="rule-card"><strong>One Animal</strong><p>Use it for one animal or one thing.</p><p><code>It</code> has gills.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>5 Challenge Practice</h2>
+    <p class="lead">Drag the pronouns into the sentences to practice the key animal patterns.</p>
+    <div class="card">
+      <div class="h">Pronoun Drag-and-Drop</div>
+      <div class="b">
+        <div class="bank drop-zone" id="pronounBank" data-zone="bank"></div>
+        <div class="sentence-list" id="pronounChallenge" style="margin-top:16px;">
+          <div class="sentence">Birds have wings. <span class="blank" data-answer="they" data-placeholder="pronoun"></span> can fly.</div>
+          <div class="sentence">A fish has gills. <span class="blank" data-answer="it" data-placeholder="pronoun"></span> can breathe in water.</div>
+          <div class="sentence">Mammals have hair or fur. Hair keeps <span class="blank" data-answer="them" data-placeholder="pronoun"></span> warm.</div>
+          <div class="sentence">This is my favorite animal group. I like <span class="blank" data-answer="it" data-placeholder="pronoun"></span>.</div>
+        </div>
+        <div class="actions"><button class="btn-main" id="pronounCheckBtn">Check Pronouns</button><button class="btn-sub" id="pronounResetBtn">Start Over</button></div>
+        <div class="report" id="pronounReport">Left to finish: 4 (done 0 / 4)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>6 Writing Task</h2>
+    <div class="purpose">Writing goal: write a 4-6 sentence paragraph about your favorite animal group on paper.</div>
+    <div class="writing-layout">
+      <figure class="image-card">
+        <img src="assets/favorite-animal-writing-prompts.png" alt="Writing questions about favorite animal group">
+        <figcaption class="caption">Writing prompts: favorite animal group, why you like it, what things they have, what they do.</figcaption>
+      </figure>
+      <div class="card">
+        <div class="h">Useful Frames</div>
+        <div class="b">
+          <div class="frame-grid">
+            <div><strong>Start</strong><span>My favorite animal group is ...</span></div>
+            <div><strong>Reason</strong><span>I like them because ...</span></div>
+            <div><strong>Body Parts</strong><span>They have ...</span></div>
+            <div><strong>Action</strong><span>They can ... / They live ...</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="paper-submit" id="paperSubmit">
+        <strong>Paper Handwriting</strong>
+        <span>Write your paragraph by hand on paper. Use at least 4 sentences. When you finish, submit your paper draft to your teacher.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section summary">
+    <h2>7 Wrap-Up</h2>
+    <p class="summary-lead">Today we learned how animals are amazing in many different ways.</p>
+    <div class="summary-check">Goal: review the unit words, reading skill, grammar, and paper writing. Before you go: name 3 animal body parts, compare 2 animal groups, and say one pronoun sentence.</div>
+    <div class="summary-grid">
+      <div class="summary-card"><div class="h">Words</div><p>I can say body parts and animal group words.</p><div class="summary-pills"><span class="summary-pill">gills</span><span class="summary-pill">scales</span><span class="summary-pill">fur</span><span class="summary-pill">wings</span></div></div>
+      <div class="summary-card"><div class="h">Reading</div><p>I can compare and contrast animal groups.</p></div>
+      <div class="summary-card"><div class="h">Grammar</div><p>I can use subject and object pronouns.</p></div>
+      <div class="summary-card"><div class="h">Writing</div><p>I can write about my favorite animal group on paper.</p></div>
+    </div>
+  </section>
+
+  <div class="nav"><a class="back" href="#top">Back to Top</a><a class="next" href="#vocabBank">Words</a><a class="next" href="#paperSubmit">Paper Draft</a></div>
+  <footer>OD2 Unit 1 · Amazing Animals</footer>
+</div>
+
+<script>
+(function(){
+  const selected={chip:null,type:null,group:null};
+  function shuffle(list){const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function chipText(text,id,target,type){const span=document.createElement('span');span.className='drag-chip';span.draggable=true;span.textContent=text;span.dataset.id=id;span.dataset.target=target;span.dataset.type=type;span.tabIndex=0;return span;}
+  function zoneOf(chip){const host=chip.parentElement&&chip.parentElement.closest('[data-zone],.blank');if(!host)return 'bank';return host.dataset.zone||host.dataset.answer||'blank';}
+  function setSelected(chip,type){document.querySelectorAll('.drag-chip.tap-selected').forEach(c=>c.classList.remove('tap-selected'));document.querySelectorAll('.tap-ready').forEach(z=>z.classList.remove('tap-ready'));if(selected.chip===chip){selected.chip=null;selected.type=null;selected.group=null;return;}selected.chip=chip;selected.type=type;selected.group=chip.dataset.group||'';chip.classList.add('tap-selected');const root=chip.closest('.card')||document;root.querySelectorAll(type==='blank'?'.blank':'.drop-zone').forEach(z=>z.classList.add('tap-ready'));}
+  function setupDrag(chips,targets,type,onMove){
+    let dragId='';
+    const group=chips[0] ? (chips[0].dataset.group||'') : '';
+    chips.forEach(chip=>{
+      chip.addEventListener('dragstart',e=>{dragId=chip.dataset.id;chip.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',dragId);});
+      chip.addEventListener('dragend',()=>chip.classList.remove('dragging'));
+      chip.addEventListener('click',()=>setSelected(chip,type));
+      chip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setSelected(chip,type);}});
+    });
+    targets.forEach(target=>{
+      target.addEventListener('dragover',e=>e.preventDefault());
+      target.addEventListener('dragenter',()=>target.classList.add('over'));
+      target.addEventListener('dragleave',e=>{if(!target.contains(e.relatedTarget))target.classList.remove('over');});
+      target.addEventListener('drop',e=>{e.preventDefault();target.classList.remove('over');const id=e.dataTransfer.getData('text/plain')||dragId;const chip=chips.find(c=>c.dataset.id===id);if(chip){onMove(chip,target);}});
+      target.addEventListener('click',()=>{if(selected.chip&&selected.type===type&&selected.group===group){onMove(selected.chip,target);selected.chip.classList.remove('tap-selected');selected.chip=null;selected.type=null;selected.group=null;document.querySelectorAll('.tap-ready').forEach(z=>z.classList.remove('tap-ready'));}});
+    });
+  }
+  function initSort(config){
+    const bank=document.getElementById(config.bank),report=document.getElementById(config.report),check=document.getElementById(config.check),reset=document.getElementById(config.reset);
+    if(!bank||!report||!check||!reset)return;
+    const chips=config.items.map((item,i)=>chipText(item.text,config.name+i,item.target,'sort'));
+    chips.forEach(chip=>chip.dataset.group=config.name);
+    const root=bank.closest('.card')||document;
+    const zones=[...root.querySelectorAll('.drop-zone')];
+    function clear(){chips.forEach(c=>c.classList.remove('good','bad'));zones.forEach(z=>z.classList.remove('good','bad'));}
+    function move(chip,target){const box=target.querySelector('.items')||target;box.appendChild(chip);clear();live();}
+    function live(){const done=chips.filter(c=>zoneOf(c)!=='bank').length;report.textContent=config.left(chips.length-done,done,chips.length);}
+    setupDrag(chips,zones,'sort',move);
+    check.addEventListener('click',()=>{let correct=0;chips.forEach(chip=>{const ok=zoneOf(chip)===chip.dataset.target;chip.classList.toggle('good',ok);chip.classList.toggle('bad',!ok&&zoneOf(chip)!=='bank');if(ok)correct++;});report.textContent='Check result: '+correct+' / '+chips.length+(correct===chips.length?', excellent!':' ('+(chips.length-correct)+' need a change)');});
+    reset.addEventListener('click',()=>{clear();shuffle(chips).forEach(chip=>bank.appendChild(chip));live();});
+    shuffle(chips).forEach(chip=>bank.appendChild(chip));live();
+  }
+  function initBlanks(){
+    const bank=document.getElementById('pronounBank'),report=document.getElementById('pronounReport'),check=document.getElementById('pronounCheckBtn'),reset=document.getElementById('pronounResetBtn');
+    if(!bank||!report||!check||!reset)return;
+    const data=['they','it','them','it'].map((text,i)=>({text,id:'pro'+i,target:text}));
+    const chips=data.map(d=>chipText(d.text,d.id,d.target,'blank'));
+    chips.forEach(chip=>chip.dataset.group='pronoun');
+    const blanks=[...document.querySelectorAll('#pronounChallenge .blank')];
+    function clear(){chips.forEach(c=>c.classList.remove('good','bad'));blanks.forEach(b=>b.classList.remove('good','bad'));}
+    function filled(){blanks.forEach(b=>b.classList.toggle('filled',!!b.querySelector('.drag-chip')));}
+    function move(chip,blank){const old=blank.querySelector('.drag-chip');if(old&&old!==chip)bank.appendChild(old);blank.appendChild(chip);clear();live();}
+    function live(){filled();const done=blanks.filter(b=>b.querySelector('.drag-chip')).length;report.textContent='Left to finish: '+(blanks.length-done)+' (done '+done+' / '+blanks.length+')';}
+    setupDrag(chips,blanks,'blank',move);
+    check.addEventListener('click',()=>{let correct=0;blanks.forEach(blank=>{const chip=blank.querySelector('.drag-chip');const ok=!!chip&&chip.textContent.trim()===blank.dataset.answer;blank.classList.toggle('good',ok);blank.classList.toggle('bad',!!chip&&!ok);if(chip){chip.classList.toggle('good',ok);chip.classList.toggle('bad',!ok);}if(ok)correct++;});report.textContent='Check result: '+correct+' / '+blanks.length+(correct===blanks.length?', all correct!':' ('+(blanks.length-correct)+' need a change)');});
+    reset.addEventListener('click',()=>{clear();shuffle(chips).forEach(chip=>bank.appendChild(chip));live();});
+    shuffle(chips).forEach(chip=>bank.appendChild(chip));live();
+  }
+  initSort({scope:'body',name:'vocab',bank:'vocabBank',report:'vocabReport',check:'vocabCheckBtn',reset:'vocabResetBtn',left:(r,d,t)=>'Words left: '+r+' (done '+d+' / '+t+')',items:[
+    {text:'skin',target:'covering'},{text:'scales',target:'covering'},{text:'feathers',target:'covering'},{text:'fur',target:'covering'},
+    {text:'ears',target:'body-parts'},{text:'mouth',target:'body-parts'},{text:'head',target:'body-parts'},{text:'legs',target:'body-parts'},{text:'eyes',target:'body-parts'},{text:'wings',target:'body-parts'},
+    {text:'mammals',target:'animal-groups'},{text:'amphibians',target:'animal-groups'},{text:'eggs',target:'animal-groups'},
+    {text:'gills',target:'water-life'},{text:'fins',target:'water-life'},{text:'fish',target:'water-life'}
+  ]});
+  initBlanks();
+})();
+</script>
+
+  <aside class="site-floating-wrap" aria-label="咨询入口">
+    <div class="site-float-panel site-float-left">
+      <h3>扫码咨询</h3>
+      <img class="site-qr-box" src="../../assets/images/serena-wechat-qr-crop.jpg" alt="Serena 老师微信二维码">
+      <p>添加老师，领取试听课和学习规划。</p>
+    </div>
+    <div class="site-float-panel site-float-right">
+      <h3>咨询窗口</h3>
+      <div class="site-consult-list">
+        <a class="site-consult-item active" href="#top">在线咨询</a>
+        <a class="site-consult-item" href="../../teachers.html">师资介绍</a>
+        <a class="site-consult-item" href="../../courses.html">课程体系</a>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>
