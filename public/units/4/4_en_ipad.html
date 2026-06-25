@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>OD2 Unit 4 | Let&#x27;s Make Ice Cream!</title>
+  <style>
+@import url('https://fonts.loli.net/css2?family=Baloo+2:wght@600;700;800;900&family=Nunito:wght@700;800;900&display=swap');
+:root{--duo-green:#58CC02;--duo-green-dark:#46A302;--duo-green-light:#E9F8DF;--duo-blue:#1CB0F6;--duo-blue-dark:#0878D6;--duo-blue-light:#DDF4FF;--duo-pink:#f8b7d0;--duo-pink-soft:#f9e0de;--duo-red:#FF4B4B;--duo-red-dark:#D62B2B;--duo-red-light:#FFE5E5;--duo-purple:#CE82FF;--duo-purple-dark:#8A3FB0;--duo-yellow:#ffce59;--duo-text:#4B4B4B;--duo-text-soft:#777;--duo-border:#E5E5E5;--duo-bg:#fff;--duo-bg-soft:#F7F7F7;--radius-sm:12px;--radius-md:16px;--radius-lg:24px;}
+*{margin:0;padding:0;box-sizing:border-box;}html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;}body{font-family:'Nunito','Baloo 2','PingFang SC','Microsoft YaHei',sans-serif;color:var(--duo-text);font-size:17px;line-height:1.6;background:#fff;overflow-x:hidden;}img{max-width:100%;height:auto;display:block;}a{text-decoration:none;color:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}.page{max-width:900px;margin:0 auto;padding:24px 16px 60px;min-width:0;}.lang-switch{display:flex;justify-content:flex-end;gap:12px;margin-bottom:20px;flex-wrap:wrap;}.lang-switch a{border-radius:999px;padding:8px 16px;font-size:15px;font-weight:900;border:2px solid var(--duo-border);border-bottom-width:4px;background:#fff;color:var(--duo-text-soft);}.lang-switch a.active{background:var(--duo-yellow);color:var(--duo-text);}
+.hero{background:#7bd5df;border:2px solid var(--duo-border);border-bottom-width:6px;border-radius:var(--radius-lg);color:var(--duo-text);padding:32px 24px;text-align:center;overflow:hidden;}.hero h1{font-family:'Baloo 2',sans-serif;font-size:42px;font-weight:900;line-height:1.15;margin-bottom:8px;text-shadow:2px 2px 0 #fff;overflow-wrap:anywhere;}.hero .sub{display:inline-block;max-width:100%;font-size:18px;font-weight:900;background:rgba(255,255,255,.5);border:2px solid rgba(255,255,255,.75);border-bottom-width:4px;border-radius:999px;padding:8px 16px;color:#fff;margin-bottom:14px;}.teacher-box{max-width:100%;font-size:16px;font-weight:900;color:#fff;background:transparent;border:0;border-radius:0;padding:0 24px;overflow-wrap:anywhere;}
+.map{margin-top:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}.map-item{min-width:0;background:#fff;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);padding:16px 12px;text-align:center;}.map-item .k{color:var(--duo-text-soft);font-size:14px;font-weight:900;text-transform:uppercase;}.map-item .v{margin-top:6px;color:var(--duo-text);font-size:18px;font-weight:900;overflow-wrap:anywhere;}
+.section{margin-top:40px;}.section h2{font-family:'Baloo 2',sans-serif;color:var(--duo-text);font-size:32px;font-weight:900;margin-bottom:8px;}.lead{color:var(--duo-text-soft);font-size:18px;font-weight:800;margin-bottom:16px;}.purpose{margin-bottom:20px;background:var(--duo-pink-soft);border:2px solid var(--duo-pink);border-bottom-width:4px;border-radius:var(--radius-md);padding:12px 16px;font-size:16px;color:var(--duo-text);font-weight:900;overflow-wrap:anywhere;}
+.card{min-width:0;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;overflow:hidden;}.card .h{padding:14px 16px;font-size:18px;font-weight:900;color:var(--duo-text);background:var(--duo-bg-soft);border-bottom:2px solid var(--duo-border);}.card .b{padding:16px;}.chips{display:flex;flex-wrap:wrap;gap:8px;}.chip,.summary-pill{display:inline-flex;border-radius:999px;padding:6px 12px;font-size:14px;font-weight:900;border:2px solid var(--duo-border);background:#fff;color:var(--duo-text);text-align:center;white-space:nowrap;}
+.image-card{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:10px;}.image-card img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--duo-pink-soft);background:#fff;}.caption{margin-top:8px;color:var(--duo-blue-dark);font-size:14px;font-weight:900;}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;}.three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.sort-label{font-size:16px;font-weight:900;color:var(--duo-text-soft);margin-bottom:12px;}.bank{border:2px dashed #BDBDBD;border-radius:var(--radius-md);background:var(--duo-bg-soft);padding:12px;min-height:82px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start;}.zones{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}.zone{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:12px;min-height:150px;}.zone h3{font-size:18px;font-weight:900;margin-bottom:8px;color:var(--duo-blue-dark);}.zone small{display:block;color:var(--duo-text-soft);font-weight:800;margin-bottom:10px;}.items{display:flex;flex-wrap:wrap;gap:8px;min-height:54px;}
+.drag-chip{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:2px solid var(--duo-border);border-bottom-width:4px;background:#fff;padding:8px 13px;font-size:14px;font-weight:900;color:var(--duo-text);cursor:grab;user-select:none;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}.drag-chip.dragging{opacity:.55;}.drag-chip.tap-selected{border-color:var(--duo-pink);background:var(--duo-pink);color:#fff;box-shadow:0 0 0 3px rgba(248,183,208,.38);}.drop-zone.over,.drop-zone.tap-ready,.blank.over,.blank.tap-ready{background:var(--duo-yellow);border-color:var(--duo-border);}.drag-chip.good,.blank.good,.zone.good{border-color:#2E8B00;background:var(--duo-green);color:#fff;}.drag-chip.bad,.blank.bad,.zone.bad{border-color:#C91818;background:var(--duo-red);color:#fff;}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;}.btn-main,.btn-sub,.nav a{border:2px solid;border-bottom-width:4px;border-radius:var(--radius-md);padding:12px 22px;font-size:16px;font-weight:900;cursor:pointer;transition:all .1s;text-decoration:none;}.btn-main{background:#7bd5df;border-color:var(--duo-border);color:#fff;}.btn-sub{background:#fff;border-color:var(--duo-border);color:var(--duo-text);}.btn-main:active,.btn-sub:active,.nav a:active,.lang-switch a:active{border-bottom-width:2px;transform:translateY(2px);}.report{margin-top:16px;border:2px solid var(--duo-blue-dark);background:var(--duo-blue-light);border-radius:var(--radius-sm);padding:12px 16px;color:var(--duo-blue-dark);font-size:16px;font-weight:900;}
+.skill-card,.guide-card,.rule-card,.compare-card,.writing-question{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:14px 16px;}.skill-card{background:var(--duo-blue-light);border-color:var(--duo-blue);color:var(--duo-blue-dark);font-weight:900;}.guide-card strong,.rule-card strong,.skill-card strong,.compare-card h3,.writing-question strong{display:block;font-size:18px;font-weight:900;margin-bottom:6px;color:var(--duo-purple-dark);}.guide-card p,.rule-card p,.compare-card p,.writing-question span{font-size:15px;font-weight:800;color:var(--duo-text);margin:6px 0;}.rule-card code{color:var(--duo-blue-dark);font-weight:900;}
+.sentence-list{display:grid;gap:12px;}.sentence{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:#fff;padding:14px 16px;font-weight:900;line-height:1.75;}.blank{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;min-width:150px;min-height:42px;margin:0 4px;padding:4px 8px;border:2px dashed #BDBDBD;border-radius:var(--radius-sm);background:var(--duo-bg-soft);}.blank::before{content:attr(data-placeholder);color:var(--duo-text-soft);font-size:14px;font-weight:900;}.blank.filled::before{content:'';display:none;}.blank .drag-chip{white-space:normal;text-align:center;line-height:1.25;}
+.writing-layout{display:grid;gap:16px;}.writing-questions,.frame-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.writing-prompt{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);background:var(--duo-blue-light);padding:14px 16px;color:var(--duo-blue-dark);font-weight:900;}.writing-prompt strong{display:block;color:var(--duo-text);font-size:19px;font-weight:900;margin-bottom:8px;}.frame-grid div{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-sm);background:var(--duo-bg-soft);padding:10px 12px;}.frame-grid strong{display:block;color:var(--duo-text);font-size:15px;font-weight:900;margin-bottom:4px;}.frame-grid span{display:block;color:var(--duo-blue-dark);font-size:15px;font-weight:900;line-height:1.4;}.model-card .b p{margin:0;color:var(--duo-text);font-size:16px;font-weight:800;line-height:1.75;}.write-helper{font-weight:800;margin-bottom:12px;color:var(--duo-text);}.paper-submit{border:2px dashed var(--duo-blue);border-bottom-width:4px;border-radius:var(--radius-md);background:var(--duo-blue-light);padding:16px;color:var(--duo-blue-dark);font-weight:900;}.paper-submit strong{display:block;font-size:20px;margin-bottom:6px;}
+.summary{background:#7bd5df;border:2px solid var(--duo-border);border-bottom-width:6px;border-radius:var(--radius-lg);padding:34px 24px;color:var(--duo-text);text-align:center;}.summary h2{font-size:44px;line-height:1.1;margin-bottom:18px;color:#fff;text-shadow:4px 4px 0 var(--duo-text);}.summary-lead{display:inline-block;max-width:100%;margin:0 0 20px;background:rgba(255,255,255,.5);border:2px solid rgba(255,255,255,.75);border-bottom-width:4px;border-radius:999px;padding:10px 22px;color:#fff;font-size:20px;font-weight:900;}.summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px;text-align:left;}.summary-card{min-width:0;background:#fff;color:var(--duo-text);border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-md);padding:14px 16px;}.summary-card .h{font-size:18px;font-weight:900;margin-bottom:8px;color:var(--duo-text);}.summary-card p{font-size:15px;font-weight:800;color:var(--duo-text);margin:0;}.summary-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}.summary-pill{border-color:var(--duo-border);background:var(--duo-yellow);color:var(--duo-text);padding:3px 9px;}.summary-check{margin:12px auto 20px;background:#fff;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:999px;padding:14px 22px;color:var(--duo-text);font-size:17px;font-weight:900;}.nav{margin-top:32px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}.nav .back,.nav .next{border-color:var(--duo-border);color:#fff;background:#7bd5df;}footer{margin-top:24px;text-align:center;font-size:14px;font-weight:700;color:var(--duo-text-soft);}
+.site-floating-wrap{display:contents;}.site-float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}.site-float-left{left:18px;top:214px;}.site-float-right{right:18px;top:204px;}.site-float-panel h3{text-align:center;font-family:'Baloo 2','PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;font-weight:900;color:rgb(192,136,128);margin:0;}.site-float-panel p{margin-top:6px;text-align:center;color:var(--duo-text-soft);font-size:12px;font-weight:900;line-height:1.35;}.site-qr-box{width:102px;height:102px;margin:10px auto 8px;border:6px solid #fff;border-radius:14px;background:#fff;box-shadow:0 0 0 2px rgba(248,200,208,.72);object-fit:cover;}.site-consult-list{display:grid;gap:8px;margin-top:10px;}.site-consult-item{min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(248,200,208,.14);font-size:14px;font-weight:900;transition:transform .16s ease,background .16s ease,box-shadow .16s ease;}.site-consult-item:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(192,136,128,.12);background:rgba(248,200,208,.26);}.site-consult-item.active{background:rgba(248,200,208,.42);color:var(--duo-text);}.site-consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
+@media(pointer:coarse){body{font-size:18px;}.page{padding:calc(18px + env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) calc(64px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));}.btn-main,.btn-sub,.nav a,.lang-switch a{min-height:48px;display:inline-flex;align-items:center;justify-content:center;}.bank{min-height:104px;}.items{min-height:72px;}.drag-chip{font-size:15px;padding:9px 14px;}.blank{min-height:48px;}}@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-float-right .site-consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.site-qr-box{width:112px;height:112px;}}@media(max-width:860px){.map{grid-template-columns:repeat(2,minmax(0,1fr));}.two-col,.three-col,.zones,.frame-grid,.summary-grid{grid-template-columns:minmax(0,1fr);}.hero h1{font-size:32px;}.section h2{font-size:28px;}.blank{min-width:140px;}.chip,.drag-chip{font-size:13px;}}@media(max-width:700px){.writing-questions{grid-template-columns:minmax(0,1fr);}}@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}.site-float-right .site-consult-list{grid-template-columns:minmax(0,1fr);}}@media(max-width:480px){.page{padding:16px 12px 48px;overflow:hidden;}.lang-switch{justify-content:center;}.hero{padding:24px 14px;}.hero h1{font-size:30px;}.hero .sub{font-size:17px;}.teacher-box{font-size:14px;padding:0 12px;}.blank{display:inline-flex;width:100%;margin:8px 0;}.sentence{line-height:1.75;}.summary{padding:26px 14px;}.summary h2{font-size:34px;}.summary-lead{font-size:17px;border-radius:28px;}.summary-check{border-radius:28px;font-size:15px;}}
+</style>
+</head>
+<body>
+<div class="page" id="top">
+  <div class="lang-switch"><a class="active" href="#top">English</a><a href="../../levels/od-level-2.html">OD Level 2</a></div>
+
+  <section class="hero">
+    <h1>Unit 4 Let&#x27;s Make Ice Cream!</h1>
+    <p class="sub">Make a food mixture and explain what happened.</p>
+    <div class="teacher-box">Unit goal: name food words, explain cause and effect, ask was / were questions, and write about a favorite mixture on paper.</div>
+  </section>
+
+  <div class="map" aria-label="Learning map">
+    <div class="map-item"><div class="k">Words</div><div class="v">Food Mixture</div></div>
+<div class="map-item"><div class="k">Reading</div><div class="v">Cause &amp; Effect</div></div>
+<div class="map-item"><div class="k">Grammar</div><div class="v">Was / Were?</div></div>
+<div class="map-item"><div class="k">Writing</div><div class="v">Favorite Mixture</div></div>
+  </div>
+
+  <section class="section">
+    <h2>1 Key Vocabulary</h2>
+    <div class="purpose">Goal: read the ice cream words, then tap or drag each word into the correct group.</div>
+    <figure class="image-card">
+      <img src="OD2-Unit4 知识清单_extracted/images/image1.png" alt="Unit 4 vocabulary: cream, sugar, salt, pour, plastic bags, mixture, open, close, freezer">
+      <figcaption class="caption">Picture Words: ice cream ingredients, tools, and actions.</figcaption>
+    </figure>
+    <div class="card" style="margin-top:16px;" data-activity="sort">
+      <div class="h">Sort the Vocabulary</div>
+      <div class="b">
+        <div class="sort-label">Word Bank</div>
+        <div class="bank drop-zone" id="vocabBank" data-zone="bank">
+          <span class="drag-chip" draggable="true" data-id="v1" data-target="ingredients">cream</span><span class="drag-chip" draggable="true" data-id="v2" data-target="ingredients">sugar</span><span class="drag-chip" draggable="true" data-id="v3" data-target="ingredients">salt</span><span class="drag-chip" draggable="true" data-id="v4" data-target="tools">plastic bags</span><span class="drag-chip" draggable="true" data-id="v5" data-target="tools">freezer</span><span class="drag-chip" draggable="true" data-id="v6" data-target="actions">pour</span><span class="drag-chip" draggable="true" data-id="v7" data-target="actions">open</span><span class="drag-chip" draggable="true" data-id="v8" data-target="actions">close</span><span class="drag-chip" draggable="true" data-id="v9" data-target="food-word">mixture</span>
+        </div>
+        <div class="zones">
+          <div class="zone drop-zone" data-zone="ingredients"><h3>Ingredients</h3><small>Things we put in the recipe.</small><div class="items"></div></div><div class="zone drop-zone" data-zone="tools"><h3>Tools and Places</h3><small>Things that help us make or keep food cold.</small><div class="items"></div></div><div class="zone drop-zone" data-zone="actions"><h3>Actions</h3><small>Things we do with food or doors.</small><div class="items"></div></div><div class="zone drop-zone" data-zone="food-word"><h3>Food Word</h3><small>The new food made from different things.</small><div class="items"></div></div>
+        </div>
+        <div class="actions"><button class="btn-main" id="vocabCheckBtn">Check Sort</button><button class="btn-sub" id="vocabResetBtn">Shuffle Again</button></div>
+        <div class="report" id="vocabReport">Words left: 9 (done 0 / 9)</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="h">Quick Word Review</div>
+      <div class="b"><div class="chips"><span class="chip">cream</span><span class="chip">sugar</span><span class="chip">salt</span><span class="chip">plastic bags</span><span class="chip">freezer</span><span class="chip">pour</span><span class="chip">open</span><span class="chip">close</span><span class="chip">mixture</span></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2 Knowledge List Guide</h2>
+    <div class="purpose">Goal: use cause and effect to explain why the ice cream melted and how the class made more.</div>
+    <div class="two-col"><div class="skill-card"><strong>Reading Skill: Cause</strong>A cause tells why something happens. Ask: Why did it happen?</div>
+<div class="skill-card"><strong>Reading Skill: Effect</strong>An effect tells what happens after the cause. Ask: What happened next?</div></div>
+    <div class="three-col" style="margin-top:16px;"><div class="guide-card"><strong>Problem</strong><p>The freezer door was open all night, so the ice cream melted.</p></div>
+<div class="guide-card"><strong>Solution</strong><p>Use cream, sugar, vanilla, ice, salt, and bags to make new ice cream.</p></div>
+<div class="guide-card"><strong>Retell Tip</strong><p>Say the cause first, then say the effect: The door was open, so the ice cream melted.</p></div></div>
+  </section>
+
+  <section class="section">
+    <h2>3 Mind Map Workshop</h2>
+    <div class="purpose">Goal: retell the ice cream story with the problem, the ingredients, and the steps.</div>
+    <figure class="image-card">
+      <img src="unit-04-mind-map.png" alt="OD2 Unit 4 Let&#x27;s Make Ice Cream! mind map">
+      <figcaption class="caption">Mind Map: ice cream problem, ingredients, and making steps.</figcaption>
+    </figure>
+    <div class="three-col" style="margin-top:16px;"><div class="compare-card"><h3>Problem</h3><p>The freezer door was open all night. The ice cream melted.</p></div>
+<div class="compare-card"><h3>Ingredients</h3><p>Cream, sugar, vanilla, ice cubes, and salt help make ice cream.</p></div>
+<div class="compare-card"><h3>Steps</h3><p>Pour the mixture into a small bag. Put ice and salt into a big bag.</p></div></div>
+  </section>
+
+  <section class="section">
+    <h2>4 Grammar and Expression</h2>
+    <div class="purpose">Goal: ask questions with was / were and answer in the simple past.</div>
+    <div class="three-col"><div class="rule-card"><strong>Was Questions</strong><p>Use was with I / he / she / it. Example: Was the freezer door open?</p></div>
+<div class="rule-card"><strong>Were Questions</strong><p>Use were with you / we / they. Example: Were the games fun?</p></div>
+<div class="rule-card"><strong>Short Answers</strong><p>Yes, it was. No, it wasn&#x27;t. Yes, they were. No, they weren&#x27;t.</p></div></div>
+    <div class="card" style="margin-top:16px;">
+      <div class="h">Useful Expressions</div>
+      <div class="b"><div class="chips"><span class="chip">all night</span><span class="chip">What&#x27;s wrong?</span><span class="chip">It&#x27;s great!</span><span class="chip">Was it open?</span><span class="chip">It was closed.</span></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>5 Challenge Practice</h2>
+    <p class="lead">Drag the phrase chunks into the sentences to retell the ice cream problem.</p>
+    <div class="card" id="practiceActivity" data-activity="blanks">
+      <div class="h">Drag-and-Drop Sentence Practice</div>
+      <div class="b">
+        <div class="sort-label">Phrase Bank</div>
+        <div class="bank drop-zone" id="practiceBank" data-zone="bank">
+          <span class="drag-chip" draggable="true" data-id="p1" data-target="was-open">was open all night</span><span class="drag-chip" draggable="true" data-id="p2" data-target="no-ice-cream">no ice cream for the party</span><span class="drag-chip" draggable="true" data-id="p3" data-target="melted">melted</span><span class="drag-chip" draggable="true" data-id="p4" data-target="closed">was closed all night</span><span class="drag-chip" draggable="true" data-id="p5" data-target="pour">Pour the cream, sugar, and vanilla mixture</span><span class="drag-chip" draggable="true" data-id="p6" data-target="salt-ice">Put the salt and ice cubes</span>
+        </div>
+        <div class="sentence-list" id="practiceChallenge" style="margin-top:16px;">
+          <div class="sentence">The freezer door <span class="blank" data-answer="was-open" data-placeholder="phrase"></span>.</div><div class="sentence">Now there is <span class="blank" data-answer="no-ice-cream" data-placeholder="phrase"></span>.</div><div class="sentence">The ice cream <span class="blank" data-answer="melted" data-placeholder="phrase"></span>.</div><div class="sentence">My freezer <span class="blank" data-answer="closed" data-placeholder="phrase"></span>, so I have ice.</div><div class="sentence"><span class="blank" data-answer="pour" data-placeholder="phrase"></span> into the small bag.</div><div class="sentence"><span class="blank" data-answer="salt-ice" data-placeholder="phrase"></span> into the big bag.</div>
+        </div>
+        <div class="actions"><button class="btn-main" id="practiceCheckBtn">Check Answers</button><button class="btn-sub" id="practiceResetBtn">Start Over</button></div>
+        <div class="report" id="practiceReport">Left to finish: 6 (done 0 / 6)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>6 Writing Task</h2>
+    <p class="lead">Writing goal: write 4-6 sentences about your favorite food or drink mixture.</p>
+    <div class="purpose">Goal: plan your ideas here, then write the final paragraph by hand on paper.</div>
+    <div class="writing-layout">
+      <div class="writing-prompt"><strong>Answer the questions about your favorite food or drink mixture.</strong><div class="writing-questions"><div class="writing-question"><strong>Favorite</strong><span>What&#x27;s your favorite mixture?</span></div>
+<div class="writing-question"><strong>Things</strong><span>What things are in the mixture?</span></div>
+<div class="writing-question"><strong>Action</strong><span>What do you do to the mixture?</span></div>
+<div class="writing-question"><strong>Eat or Drink</strong><span>Do you eat or drink it?</span></div>
+<div class="writing-question"><strong>Feeling</strong><span>How is it?</span></div></div></div>
+      <div class="card model-card"><div class="h">Model Paragraph</div><div class="b"><p>My favorite mixture is a fruit smoothie. It has milk, bananas, and strawberries. I put them in a blender and mix them. I drink it. It is sweet and cold.</p></div></div>
+      <div class="card"><div class="h">Useful Frames</div><div class="b"><div class="frame-grid"><div><strong>Frame</strong><span>My favorite mixture is ...</span></div>
+<div><strong>Frame</strong><span>It has ...</span></div>
+<div><strong>Frame</strong><span>I ... the mixture.</span></div>
+<div><strong>Frame</strong><span>I eat / drink it.</span></div>
+<div><strong>Frame</strong><span>It is ...</span></div></div></div></div>
+      <div class="card"><div class="h">My Writing Draft</div><div class="b"><p class="write-helper">Use the question cards and frames. Write short, clear sentences.</p><div class="paper-submit" id="paperSubmit" aria-label="Paper handwriting submission"><strong>Paper Handwriting</strong><span>Write your paragraph by hand on paper. When you finish, submit your paper draft to your teacher.</span></div></div></div>
+    </div>
+  </section>
+
+  <section class="section summary">
+    <h2>7 Wrap-Up</h2>
+    <p class="summary-lead">Today we made ice cream ideas and explained cause and effect.</p>
+    <div class="summary-check">Before you go: say 3 words, retell 1 key idea, and read 1 grammar sentence aloud.</div>
+    <div class="summary-grid"><div class="summary-card"><div class="h">Words</div><p>I can name ingredients, actions, and tools.</p></div>
+<div class="summary-card"><div class="h">Reading</div><p>I can tell the cause and the effect.</p></div>
+<div class="summary-card"><div class="h">Grammar</div><p>I can ask was / were questions.</p></div>
+<div class="summary-card"><div class="h">Writing</div><p>I can write about a favorite mixture on paper.</p></div></div>
+    <div class="summary-pills"><span class="summary-pill">cream</span><span class="summary-pill">sugar</span><span class="summary-pill">salt</span><span class="summary-pill">plastic bags</span></div>
+  </section>
+
+  <div class="nav"><a class="back" href="#top">Back to Top</a><a class="next" href="#vocabBank">Words</a><a class="next" href="#practiceChallenge">Practice</a><a class="next" href="#paperSubmit">Paper Draft</a></div>
+  <footer>OD2 Unit 4 · Let&#x27;s Make Ice Cream!</footer>
+</div>
+
+<script>
+(function(){
+  const selected={chip:null,root:null};
+  function all(sel,root){return Array.from((root||document).querySelectorAll(sel));}
+  function shuffle(list){const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function activityOf(el){return el.closest('[data-activity]');}
+  function hostOf(chip){return chip.parentElement&&chip.parentElement.closest('.drop-zone,.blank');}
+  function zoneOf(chip){const host=hostOf(chip);if(!host)return 'bank';return host.dataset.zone||host.dataset.answer||'bank';}
+  function targetBox(drop){return drop.classList.contains('blank')?drop:(drop.querySelector('.items')||drop);}
+  function clearState(root){all('.drag-chip,.blank,.drop-zone,.zone',root).forEach(el=>el.classList.remove('good','bad'));}
+  function setFilled(root){all('.blank',root).forEach(blank=>blank.classList.toggle('filled',!!blank.querySelector('.drag-chip')));}
+  function updateSortReport(root,reportId){const chips=all('.drag-chip',root);const total=chips.length;const done=chips.filter(chip=>zoneOf(chip)!=='bank').length;const report=document.getElementById(reportId);if(report)report.textContent='Words left: '+(total-done)+' (done '+done+' / '+total+')';}
+  function updateBlankReport(root,reportId){setFilled(root);const blanks=all('.blank',root);const total=blanks.length;const done=blanks.filter(blank=>blank.querySelector('.drag-chip')).length;const report=document.getElementById(reportId);if(report)report.textContent='Left to finish: '+(total-done)+' (done '+done+' / '+total+')';}
+  function moveChip(chip,drop){const root=activityOf(drop);if(!root||activityOf(chip)!==root)return;const bank=root.querySelector('.bank');if(drop.classList.contains('blank')){const old=drop.querySelector('.drag-chip');if(old&&old!==chip&&bank)targetBox(bank).appendChild(old);drop.appendChild(chip);}else{targetBox(drop).appendChild(chip);}clearState(root);}
+  function selectChip(chip){const root=activityOf(chip);if(!root)return;if(selected.chip===chip){clearSelection();return;}clearSelection();selected.chip=chip;selected.root=root;chip.classList.add('tap-selected');all('.drop-zone,.blank',root).forEach(drop=>drop.classList.add('tap-ready'));}
+  function clearSelection(){if(selected.root){all('.drag-chip,.drop-zone,.blank',selected.root).forEach(el=>el.classList.remove('tap-selected','tap-ready'));}selected.chip=null;selected.root=null;}
+  function bindDrag(root,reportFn){let dragId='';all('.drag-chip',root).forEach(chip=>{chip.tabIndex=0;chip.addEventListener('dragstart',e=>{dragId=chip.dataset.id||'';chip.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',dragId);});chip.addEventListener('dragend',()=>chip.classList.remove('dragging'));});
+    all('.drop-zone,.blank',root).forEach(drop=>{drop.tabIndex=0;drop.addEventListener('dragover',e=>e.preventDefault());drop.addEventListener('dragenter',()=>drop.classList.add('over'));drop.addEventListener('dragleave',e=>{if(!drop.contains(e.relatedTarget))drop.classList.remove('over');});drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('over');const id=e.dataTransfer.getData('text/plain')||dragId;const chip=all('.drag-chip',root).find(x=>x.dataset.id===id);if(!chip)return;moveChip(chip,drop);reportFn();clearSelection();});});
+  }
+  function setupSort(rootSelector,bankId,checkId,resetId,reportId){const root=document.querySelector(rootSelector),bank=document.getElementById(bankId),check=document.getElementById(checkId),reset=document.getElementById(resetId);if(!root||!bank||!check||!reset)return;const chips=all('.drag-chip',root);const reportFn=()=>updateSortReport(root,reportId);bindDrag(root,reportFn);check.addEventListener('click',()=>{let correct=0;chips.forEach(chip=>{const ok=zoneOf(chip)===chip.dataset.target;const host=hostOf(chip);chip.classList.toggle('good',ok);chip.classList.toggle('bad',!ok&&zoneOf(chip)!=='bank');if(host&&host!==bank){host.classList.toggle('good',ok);host.classList.toggle('bad',!ok);}if(ok)correct++;});const report=document.getElementById(reportId);if(report)report.textContent='Check result: '+correct+' / '+chips.length+(correct===chips.length?', all correct!':' ('+(chips.length-correct)+' still need a change)');});reset.addEventListener('click',()=>{clearState(root);shuffle(chips).forEach(chip=>targetBox(bank).appendChild(chip));reportFn();clearSelection();});shuffle(chips).forEach(chip=>targetBox(bank).appendChild(chip));reportFn();}
+  function setupBlanks(rootSelector,bankId,checkId,resetId,reportId){const root=document.querySelector(rootSelector),bank=document.getElementById(bankId),check=document.getElementById(checkId),reset=document.getElementById(resetId);if(!root||!bank||!check||!reset)return;const chips=all('.drag-chip',root),blanks=all('.blank',root);const reportFn=()=>updateBlankReport(root,reportId);bindDrag(root,reportFn);check.addEventListener('click',()=>{let correct=0;blanks.forEach(blank=>{const chip=blank.querySelector('.drag-chip');const ok=!!chip&&chip.dataset.target===blank.dataset.answer;blank.classList.toggle('good',ok);blank.classList.toggle('bad',!ok);if(chip){chip.classList.toggle('good',ok);chip.classList.toggle('bad',!ok);}if(ok)correct++;});const report=document.getElementById(reportId);if(report)report.textContent='Check result: '+correct+' / '+blanks.length+(correct===blanks.length?', all correct!':' ('+(blanks.length-correct)+' still need a change)');});reset.addEventListener('click',()=>{clearState(root);shuffle(chips).forEach(chip=>targetBox(bank).appendChild(chip));reportFn();clearSelection();});shuffle(chips).forEach(chip=>targetBox(bank).appendChild(chip));reportFn();}
+  document.addEventListener('click',e=>{const chip=e.target.closest('.drag-chip');if(chip){selectChip(chip);e.stopPropagation();return;}const drop=e.target.closest('.drop-zone,.blank');if(drop&&selected.chip&&activityOf(drop)===selected.root){moveChip(selected.chip,drop);if(selected.root.dataset.activity==='sort')updateSortReport(selected.root,selected.root.querySelector('.report').id);else updateBlankReport(selected.root,selected.root.querySelector('.report').id);clearSelection();e.stopPropagation();return;}clearSelection();});
+  document.addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const chip=e.target.closest('.drag-chip');const drop=e.target.closest('.drop-zone,.blank');if(chip){e.preventDefault();selectChip(chip);}else if(drop&&selected.chip&&activityOf(drop)===selected.root){e.preventDefault();moveChip(selected.chip,drop);if(selected.root.dataset.activity==='sort')updateSortReport(selected.root,selected.root.querySelector('.report').id);else updateBlankReport(selected.root,selected.root.querySelector('.report').id);clearSelection();}});
+  all('.report').forEach(report=>report.setAttribute('aria-live','polite'));
+  setupSort('[data-activity="sort"]','vocabBank','vocabCheckBtn','vocabResetBtn','vocabReport');
+  setupBlanks('#practiceActivity','practiceBank','practiceCheckBtn','practiceResetBtn','practiceReport');
+})();
+</script>
+
+  <aside class="site-floating-wrap" aria-label="consultation">
+    <div class="site-float-panel site-float-left">
+      <h3>Scan QR</h3>
+      <img class="site-qr-box" src="../../assets/images/serena-wechat-qr-crop.jpg" alt="Serena teacher WeChat QR code">
+      <p>Add the teacher to get a trial lesson and study plan.</p>
+    </div>
+    <div class="site-float-panel site-float-right">
+      <h3>Consult</h3>
+      <div class="site-consult-list">
+        <a class="site-consult-item active" href="#top">Online</a>
+        <a class="site-consult-item" href="../../teachers.html">Teachers</a>
+        <a class="site-consult-item" href="../../courses.html">Courses</a>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>

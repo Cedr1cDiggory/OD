@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -14,6 +14,7 @@
 @media(pointer:coarse){body{font-size:18px;}.page{padding:calc(18px + env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) calc(64px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));}.btn-main,.btn-sub,.nav a,.lang-switch a{min-height:48px;display:inline-flex;align-items:center;justify-content:center;}.bank{min-height:104px;}.items{min-height:72px;}.drag-chip{font-size:15px;padding:9px 14px;}.blank{min-height:48px;}}@media(max-width:860px){.map{grid-template-columns:repeat(2,minmax(0,1fr));}.two-col,.three-col,.zones,.compare-grid,.frame-grid,.summary-grid{grid-template-columns:minmax(0,1fr);}.hero h1{font-size:32px;}.section h2{font-size:28px;}.blank{min-width:140px;}.chip,.drag-chip{font-size:13px;}}@media(max-width:480px){body{overflow-x:hidden;}.page{padding:16px 12px 48px;overflow:hidden;}.lang-switch{justify-content:center;flex-wrap:wrap;}.hero{padding:24px 14px;}.hero h1{font-size:30px;}.hero .sub{font-size:17px;}.teacher-box{font-size:14px;padding:10px 12px;}.blank{display:inline-flex;width:100%;margin:8px 0;}.sentence{line-height:1.75;}.bubble{max-width:100%;}.summary{padding:20px 14px;}}
   
 .site-floating-wrap{display:contents;}
+    .pronoun-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}.pronoun-legend span{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:900;color:var(--duo-text-soft);}.pronoun-legend b{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:28px;border-radius:999px;background:var(--duo-blue-light);color:var(--duo-blue-dark);}.pronoun-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;}.pronoun-pair{min-width:0;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-sm);background:#fff;text-align:center;overflow:hidden;}.pronoun-pair strong,.pronoun-pair span{display:block;padding:9px 4px;font-size:16px;font-weight:900;}.pronoun-pair strong{background:var(--duo-blue-light);color:var(--duo-blue-dark);}.pronoun-pair span{border-top:2px solid var(--duo-border);color:var(--duo-purple-dark);}.writing-questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.writing-question{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-sm);background:var(--duo-bg-soft);padding:12px 14px;}.writing-question strong{display:block;color:var(--duo-blue-dark);font-size:15px;font-weight:900;margin-bottom:4px;}.writing-question span{display:block;color:var(--duo-text);font-size:15px;font-weight:800;}.model-card .b p{margin:0;color:var(--duo-text);font-size:16px;font-weight:800;line-height:1.75;}.target-word{display:inline-flex;border-radius:8px;background:var(--duo-pink);color:#fff;padding:1px 6px;font-weight:900;line-height:1.2;white-space:nowrap;}.write-helper{font-weight:800;margin-bottom:12px;color:var(--duo-text);}
 .site-float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}
 .site-float-left{left:18px;top:214px;}
 .site-float-right{right:18px;top:204px;}
@@ -27,6 +28,8 @@
 .site-consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
 @media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-float-right .site-consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.site-qr-box{width:112px;height:112px;}}
 @media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}.site-float-right .site-consult-list{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:700px){.pronoun-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.writing-questions{grid-template-columns:minmax(0,1fr);}}
+@media(max-width:430px){.pronoun-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 
 </style>
 </head>
@@ -108,21 +111,25 @@
   <section class="section">
     <h2>4 Grammar and Expression</h2>
     <div class="purpose">Goal: use subject and object pronouns to make animal sentences shorter and clearer.</div>
-    <div class="two-col">
-      <figure class="image-card">
-        <img src="assets/subject-object-pronouns-chart.png" alt="Subject and object pronouns grammar chart">
-        <figcaption class="caption">Grammar list: I, you, he, she, it, we, they / me, you, him, her, it, us, them.</figcaption>
-      </figure>
-      <div class="card">
-        <div class="h">Rule Cards</div>
-        <div class="b">
-          <div class="three-col">
-            <div class="rule-card"><strong>Subject</strong><p>Use before the verb.</p><p><code>They</code> have wings.</p></div>
-            <div class="rule-card"><strong>Object</strong><p>Use after the verb.</p><p>Look at <code>them</code>.</p></div>
-            <div class="rule-card"><strong>One Animal</strong><p>Use it for one animal or one thing.</p><p><code>It</code> has gills.</p></div>
-          </div>
+    <div class="card">
+      <div class="h">Subject and Object Pronouns</div>
+      <div class="b">
+        <div class="pronoun-legend"><span><b>S</b> Subject: before the verb</span><span><b>O</b> Object: after a verb or preposition</span></div>
+        <div class="pronoun-grid" aria-label="Subject and object pronoun pairs">
+          <div class="pronoun-pair"><strong>I</strong><span>me</span></div>
+          <div class="pronoun-pair"><strong>you</strong><span>you</span></div>
+          <div class="pronoun-pair"><strong>he</strong><span>him</span></div>
+          <div class="pronoun-pair"><strong>she</strong><span>her</span></div>
+          <div class="pronoun-pair"><strong>it</strong><span>it</span></div>
+          <div class="pronoun-pair"><strong>we</strong><span>us</span></div>
+          <div class="pronoun-pair"><strong>they</strong><span>them</span></div>
         </div>
       </div>
+    </div>
+    <div class="three-col" style="margin-top:16px;">
+      <div class="rule-card"><strong>Subject Pronoun</strong><p>Use it as the subject, before the verb.</p><p><code>They</code> have wings.</p></div>
+      <div class="rule-card"><strong>Object Pronoun</strong><p>Use it after a verb or preposition.</p><p>Look at <code>them</code>.</p></div>
+      <div class="rule-card"><strong>One Animal</strong><p>Use <code>it</code> for one animal or one thing.</p><p><code>It</code> has gills. I like <code>it</code>.</p></div>
     </div>
   </section>
 
@@ -147,12 +154,24 @@
 
   <section class="section">
     <h2>6 Writing Task</h2>
+    <p class="lead">Plan your ideas, read the model paragraph, and then write about your favorite animal group on paper.</p>
     <div class="purpose">Writing goal: write a 4-6 sentence paragraph about your favorite animal group on paper.</div>
     <div class="writing-layout">
-      <figure class="image-card">
-        <img src="assets/favorite-animal-writing-prompts.png" alt="Writing questions about favorite animal group">
-        <figcaption class="caption">Writing prompts: favorite animal group, why you like it, what things they have, what they do.</figcaption>
-      </figure>
+      <div class="card model-card">
+        <div class="h">Model Paragraph</div>
+        <div class="b"><p>My favorite animal group is <span class="target-word">birds</span>. They live in many places around the world. They have feathers, wings, and beaks. They can fly, and they lay eggs. I like them because they are beautiful and amazing.</p></div>
+      </div>
+      <div class="card">
+        <div class="h">Plan Your Ideas</div>
+        <div class="b">
+          <div class="writing-questions">
+            <div class="writing-question"><strong>1 Favorite Group</strong><span>What is your favorite animal group?</span></div>
+            <div class="writing-question"><strong>2 Home</strong><span>Where do they live?</span></div>
+            <div class="writing-question"><strong>3 Body Parts</strong><span>What things do they have?</span></div>
+            <div class="writing-question"><strong>4 Actions</strong><span>What do they do?</span></div>
+          </div>
+        </div>
+      </div>
       <div class="card">
         <div class="h">Useful Frames</div>
         <div class="b">
@@ -164,9 +183,15 @@
           </div>
         </div>
       </div>
-      <div class="paper-submit" id="paperSubmit">
-        <strong>Paper Handwriting</strong>
-        <span>Write your paragraph by hand on paper. Use at least 4 sentences. When you finish, submit your paper draft to your teacher.</span>
+      <div class="card">
+        <div class="h">My Writing Draft</div>
+        <div class="b">
+          <p class="write-helper">Suggested order: favorite group → where they live → body parts → actions → why you like them.</p>
+          <div class="paper-submit" id="paperSubmit" aria-label="Paper handwriting submission">
+            <strong>Paper Handwriting</strong>
+            <span>Write your paragraph by hand on paper. Use at least 4 sentences. When you finish, submit your paper draft to your teacher.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>

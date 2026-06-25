@@ -216,6 +216,34 @@ Hero 和 Wrap-Up 是页面情绪锚点：
 8. 纸质手写提交提示。
 9. 总结自检。
 
+### 标准 Unit 页面骨架
+
+生成或修复 OD2 Unit 页面时，优先对齐 `public/units/3/3_en_ipad.html`、`public/units/4/4_en_ipad.html`、`public/units/5/5_en_ipad.html` 和 `public/units/12/12_od2_en_ipad.html` 的 7 段式课件结构。除非用户明确要求，否则不要随意增加完整大段模块。
+
+标准标题顺序应为：
+
+1. `1 Key Vocabulary`
+2. `2 Knowledge List Guide`
+3. `3 Mind Map Workshop`
+4. `4 Grammar and Expression`
+5. `5 Challenge Practice`
+6. `6 Writing Task`
+7. `7 Wrap-Up`
+
+顶部学习地图也应对应四类主线：
+
+- `Words`
+- `Reading`
+- `Grammar`
+- `Writing`
+
+如果教材中有 Communicate、Speaking、Listening、Word Study、Project、Wrap Up 等内容，应优先合并进上述主线：
+
+- Communicate / Speaking / Listening：通常作为 `5 Challenge Practice` 或 `4 Grammar and Expression` 的文本卡、句型框架、听说补充，不单独扩成完整大段。
+- Word Study：通常并入 `4 Grammar and Expression`。
+- Project：通常并入 `6 Writing Task`，并保持纸质完成提示。
+- Wrap Up / Big Question：通常并入 `7 Wrap-Up` 的总结卡和自检句，不要再额外新增一个普通 `Wrap Up` 大段。
+
 ## 代码实现约束
 
 当前页面是单文件 HTML，新增或修改同类页面时优先保持这种轻量结构：
@@ -255,6 +283,19 @@ Hero 和 Wrap-Up 是页面情绪锚点：
 - 图片没有变形，裁切区域符合题目。
 - 英文任务说明短而明确。
 - Wrap-Up 能明确回收本课目标。
+
+## 已知生成问题记录
+
+生成或修改新 Unit 页面时，必须特别避免以下已出现过的问题：
+
+- 不要在 Unit 12 模板主线之外随意新增完整学习模块。例如 Unit 3 不应新增独立的 `Listening Clues` 大段；听力词汇可作为词汇补充或不放入页面，页面主线仍应贴近 Words / Reading / Mind Map / Grammar / Practice / Writing / Wrap-Up。
+- 思维导图是核心学习资源，类似 `public/units/3/unit-03-mind-map.png` 的 mind map 图片必须保留。删除辅助复述截图时，不要误删 mind map 区块。
+- 语法和作文模块如果素材图片主要是文字题目或表格，应提取为 HTML 文本、表格、卡片和句型框架，不要直接嵌入整张文字截图。词汇图、思维导图等真正服务识图和复述的图片可以保留。
+- 对照 Unit 12 模板时，先核对段落数量、编号和导航锚点，再处理局部素材。删除模块后必须同步清理对应 JS 初始化、按钮 id、报告区 id 和导航目标，避免残留死代码。
+- 写作模块仍然只引导纸质手写提交，不要加入网页内书写板或把图片里的横线作文区域原样嵌入。
+- Unit 2 曾出现过整个架构偏离相邻单元的问题：页面把 Reading Strategy、Communicate、Speaking、Story Check、Writing Project、Wrap Up 等拆成过多独立大段，并把教材截图作为正文内容嵌入。以后修复或生成类似页面时，必须先核对相邻 Unit 的 7 段式标题和学习地图，再把教材图片中的文字提取成 HTML 文本、卡片、表格、句型框架或单一 Challenge 练习。
+- Unit 2 类型内容的处理原则：`1 Key Vocabulary` 可以保留词汇识图；`3 Mind Map Workshop` 必须保留真实 mind map；其它教材页截图（reading comprehension、grammar、communicate、speaking、project、wrap-up 等）不得作为主要正文图片嵌入，应转写为 HTML。第 5 段通常只保留一个统一的 `Challenge Practice` 互动活动，避免把多个小练习拆成多个完整 section。
+- 页面修复完成后，必须用 `rg` 检查是否仍有不应存在的教材截图路径残留，例如 `unitX-reading-*`、`unitX-grammar-*`、`unitX-communicate-*`、`unitX-speaking-*`、`unitX-project-*`、`unitX-wrap-*`、`source-pages`。如果这些图片只是文字页或整页教材截图，应删除对应 `<img>` 并改成 HTML 文本。
 
 ## 设计判断原则
 
