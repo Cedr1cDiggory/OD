@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{LEVEL_LABEL}} Unit {{UNIT_NUMBER}} · {{UNIT_TITLE}}</title>
+  <style>
+    :root{--blue:#7bd5df;--pink:#f8b7d0;--green:#58CC02;--yellow:#ffce59;--text:#4B4B4B;--line:#E5E5E5;--paper:#fff;--radius:16px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fffaf8;color:var(--text);font-family:Nunito,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}a{color:inherit}.page{width:min(100%,900px);margin:auto;padding:calc(20px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(56px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}.hero,.summary{padding:28px;border:2px solid var(--line);border-bottom-width:4px;border-radius:24px;background:var(--blue);color:#fff}.hero h1,.summary h2{margin:0;font-size:clamp(32px,7vw,52px);line-height:1.1;text-shadow:3px 3px 0 var(--text)}.hero p,.summary>p{display:inline-block;padding:8px 16px;border:2px solid rgba(255,255,255,.75);border-radius:999px;background:rgba(255,255,255,.5);font-weight:900}.map{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.map a,.card{border:2px solid var(--line);border-bottom-width:4px;border-radius:var(--radius);background:var(--paper);padding:16px;font-weight:900;text-decoration:none}.section{padding:28px 0}.section h2{font-size:clamp(26px,5vw,36px);line-height:1.2}.purpose{padding:12px 16px;border:2px solid var(--line);border-bottom-width:4px;border-radius:999px;background:var(--pink);color:#fff;font-weight:900}.card{margin-top:16px}.paper-note{border-color:var(--green)}@media(max-width:700px){.map{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.map{grid-template-columns:1fr}.page{overflow:hidden}}
+  </style>
+</head>
+<body>
+  <main class="page" id="top">
+    <header class="hero"><h1>{{LEVEL_LABEL}} Unit {{UNIT_NUMBER}}</h1><p>{{UNIT_TITLE}}</p></header>
+    <nav class="map" aria-label="Learning map"><a href="#vocabulary">Words</a><a href="#knowledge">Reading</a><a href="#grammar">Grammar</a><a href="#writing">Writing</a></nav>
+    <section class="section" id="vocabulary"><h2>1 Key Vocabulary</h2><p class="purpose">Goal: learn the key picture words.</p><div class="card">Add the vocabulary picture and touch-friendly activity.</div></section>
+    <section class="section" id="knowledge"><h2>2 Knowledge List Guide</h2><p class="purpose">Goal: find the big idea and useful reading clues.</p><div class="card">Turn the source material into short HTML cards.</div></section>
+    <section class="section" id="mind-map"><h2>3 Mind Map Workshop</h2><p class="purpose">Goal: use the mind map to retell the unit.</p><div class="card">Keep the real mind map image here.</div></section>
+    <section class="section" id="grammar"><h2>4 Grammar and Expression</h2><p class="purpose">Goal: notice and use the key sentence pattern.</p><div class="card">Add short rules and examples.</div></section>
+    <section class="section" id="challenge"><h2>5 Challenge Practice</h2><p class="purpose">Goal: complete one clear touch-friendly challenge.</p><div class="card">Support tap, drag, keyboard, and immediate feedback.</div></section>
+    <section class="section" id="writing"><h2>6 Writing Task</h2><p class="purpose">Goal: plan and write on paper.</p><div class="card paper-note">Write your paragraph on paper. Then give it to your teacher.</div></section>
+    <section class="section summary" id="wrap-up"><h2>7 Wrap-Up</h2><p>I can use the unit words, reading idea, grammar, and writing frame.</p></section>
+  </main>
+</body>
+</html>
