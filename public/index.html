@@ -20,9 +20,9 @@ a{text-decoration:none;color:inherit;touch-action:manipulation;-webkit-tap-highl
 .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
 .nav a,.action{min-height:42px;display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--border);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.68);padding:6px 14px;font-size:14px;font-weight:900;color:var(--text);transition:transform .16s ease,background .16s ease,border-color .16s ease,box-shadow .16s ease;}
 .nav a.active,.action{background:var(--sky);border-color:var(--border);color:#fff;}
-.nav a:hover,.action:hover,.consult-item:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(7,81,191,.13);background:var(--sky);border-color:var(--border);color:#fff;}
+.nav a:hover,.action:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(7,81,191,.13);background:var(--sky);border-color:var(--border);color:#fff;}
 .cta:hover,.big-link:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(7,81,191,.13);filter:saturate(1.06) brightness(1.02);}
-.nav a:active,.action:active,.level-card:active,.big-link:active,.consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
+.nav a:active,.action:active,.level-card:active,.big-link:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
 .hero{position:relative;overflow:hidden;border:2px solid var(--border);border-bottom-width:3px;border-radius:var(--radius-lg);background:linear-gradient(180deg,#0751bf 0%,#168ee6 52%,#73d1df 100%);padding:40px 32px;min-height:330px;}
 .hero::before{content:"";position:absolute;inset:16px;border:2px dashed rgba(255,255,255,.8);border-radius:12px;pointer-events:none;z-index:1;}
 .hero::after{content:"";position:absolute;right:-18px;bottom:-28px;z-index:0;width:min(38vw,340px);aspect-ratio:1;background:url("assets/images/stickers/tutu-hero-corner.webp") center/contain no-repeat;opacity:.9;pointer-events:none;}
@@ -76,18 +76,18 @@ a{text-decoration:none;color:inherit;touch-action:manipulation;-webkit-tap-highl
 .path-card p{margin-top:4px;color:var(--soft);font-size:16px;font-weight:800;}
 .float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}
 .float-left{left:18px;top:214px;}
-.float-right{right:18px;top:204px;}
+
 .float-panel h3{text-align:center;font-family:var(--display-font);font-size:16px;font-weight:900;color:rgb(192,136,128);}
 .float-panel p{margin-top:6px;text-align:center;color:var(--soft);font-size:12px;font-weight:900;line-height:1.35;}
 .qr-box{width:102px;height:102px;margin:10px auto 8px;border:6px solid #fff;border-radius:14px;background:#fff;box-shadow:0 0 0 2px rgba(248,200,208,.72);object-fit:cover;}
-.consult-list{display:grid;gap:8px;margin-top:10px;}
-.consult-item{min-height:48px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(248,200,208,.14);font-size:14px;font-weight:900;transition:transform .16s ease,background .16s ease,box-shadow .16s ease;}
-.consult-item.active{background:rgba(248,200,208,.42);color:var(--text);}
+
+
+
 .footer{margin-top:28px;text-align:center;color:var(--soft);font-size:14px;font-weight:900;}
-@media(max-width:1280px){.float-panel{position:static;width:auto;box-shadow:none;}.floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.float-right .consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.qr-box{width:112px;height:112px;}}
+@media(max-width:1280px){.float-panel{position:static;width:auto;box-shadow:none;}.floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:minmax(0,1fr);gap:14px;}.qr-box{width:112px;height:112px;}}
 @media(min-width:1281px){.floating-wrap{display:contents;}}
 @media(max-width:920px){.topbar-inner{align-items:flex-start;}.brand-logo{width:210px;height:72px;}.hero::after{width:260px;right:-50px;bottom:-32px;opacity:.48;}.hero-grid{max-width:100%;}.level-section::after{width:210px;opacity:.12;}.quick-strip,.levels{grid-template-columns:repeat(2,minmax(0,1fr));}.section-head{align-items:flex-start;flex-direction:column;}.path-grid,.bottom-links{grid-template-columns:minmax(0,1fr);}}
-@media(max-width:560px){body{font-size:17px;overflow-x:hidden;}.shell{padding-left:12px;padding-right:12px;}.topbar{margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px;}.topbar-inner{display:grid;grid-template-columns:minmax(0,1fr);}.brand-logo{width:198px;height:68px;}.nav{justify-content:flex-start;}.hero{padding:28px 16px;min-height:300px;}.hero::after{width:220px;right:-74px;bottom:-38px;opacity:.28;}.hero h1{font-size:34px;text-shadow:2px 2px 0 rgba(52,66,68,.24);}.hero-copy{font-size:16px;}.quick-strip,.levels,.floating-wrap{grid-template-columns:minmax(0,1fr);}.quick-card,.path-card{grid-template-columns:64px minmax(0,1fr);}.float-right .consult-list{grid-template-columns:minmax(0,1fr);}.big-link{min-height:118px;padding:16px;}.big-link strong{font-size:28px;}}
+@media(max-width:560px){body{font-size:17px;overflow-x:hidden;}.shell{padding-left:12px;padding-right:12px;}.topbar{margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px;}.topbar-inner{display:grid;grid-template-columns:minmax(0,1fr);}.brand-logo{width:198px;height:68px;}.nav{justify-content:flex-start;}.hero{padding:28px 16px;min-height:300px;}.hero::after{width:220px;right:-74px;bottom:-38px;opacity:.28;}.hero h1{font-size:34px;text-shadow:2px 2px 0 rgba(52,66,68,.24);}.hero-copy{font-size:16px;}.quick-strip,.levels,.floating-wrap{grid-template-columns:minmax(0,1fr);}.quick-card,.path-card{grid-template-columns:64px minmax(0,1fr);}.big-link{min-height:118px;padding:16px;}.big-link strong{font-size:28px;}}
   </style>
 </head>
 <body>
@@ -180,14 +180,6 @@ a{text-decoration:none;color:inherit;touch-action:manipulation;-webkit-tap-highl
       <h3>扫码咨询</h3>
       <img class="qr-box" src="assets/images/serena-wechat-qr-crop.webp" alt="Serena 老师微信二维码">
       <p>添加老师，领取试听课和学习规划。</p>
-    </div>
-    <div class="float-panel float-right">
-      <h3>咨询窗口</h3>
-      <div class="consult-list">
-        <a class="consult-item active" href="#levels">在线咨询</a>
-        <a class="consult-item" href="teachers.html">师资介绍</a>
-        <a class="consult-item" href="courses.html">课程体系</a>
-      </div>
     </div>
   </aside>
 </body>

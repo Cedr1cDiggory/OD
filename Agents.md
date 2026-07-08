@@ -4,7 +4,15 @@
 
 本项目是面向 iPad/触屏课堂的少儿英语互动课件。页面不应像普通网页或营销页，而应像一张可操作的儿童学习工作纸：明亮、圆润、清楚、可点、可拖，并能自然引导学生完成纸质书写任务。
 
-当前参考页为 `public/units/12/12_en_ipad.html`，其核心气质是：
+### 项目目录约定
+
+- 正式 Unit 页面统一放在 `public/units/od{1-4}/unit-{01-18}/index.html`。
+- Unit 运行时图片统一放在同级 `assets/images/`；跨 Unit 共享资源放在 `public/assets/`。
+- Word、PDF、提取 Markdown、教材整页图和处理中间文件统一放在 `content/od{level}/unit-{NN}/`，不得放进正式页面目录。
+- `public/units/<数字>/` 只保留旧链接兼容跳转，不得继续开发课程内容。
+- 新建页面使用 `python tools/create_unit.py od1 1 "Unit title"`，完成后运行 `python tools/validate_units.py`。
+
+当前参考页为 `public/units/od1/unit-12/index.html`，其核心气质是：
 
 - 少儿英语教材感：主题直接、句型简单、任务目标明确。
 - Duolingo 式互动卡片感：厚边框、圆角、胶囊按钮、即时反馈。
@@ -218,7 +226,7 @@ Hero 和 Wrap-Up 是页面情绪锚点：
 
 ### 标准 Unit 页面骨架
 
-生成或修复 OD2 Unit 页面时，优先对齐 `public/units/3/3_en_ipad.html`、`public/units/4/4_en_ipad.html`、`public/units/5/5_en_ipad.html` 和 `public/units/12/12_od2_en_ipad.html` 的 7 段式课件结构。除非用户明确要求，否则不要随意增加完整大段模块。
+生成或修复 OD2 Unit 页面时，优先对齐 `public/units/od2/unit-03/index.html`、`public/units/od2/unit-04/index.html`、`public/units/od2/unit-05/index.html` 和 `public/units/od2/unit-12/index.html` 的 7 段式课件结构。除非用户明确要求，否则不要随意增加完整大段模块。
 
 标准标题顺序应为：
 
@@ -239,10 +247,174 @@ Hero 和 Wrap-Up 是页面情绪锚点：
 
 如果教材中有 Communicate、Speaking、Listening、Word Study、Project、Wrap Up 等内容，应优先合并进上述主线：
 
+- 制作 OD1 Unit 页面时，知识清单中的 Listening / Speaking 内容不提取、不转写，也不放入 Challenge Practice；Challenge 只使用主词汇、阅读、语法和写作主线内容。
+
 - Communicate / Speaking / Listening：通常作为 `5 Challenge Practice` 或 `4 Grammar and Expression` 的文本卡、句型框架、听说补充，不单独扩成完整大段。
 - Word Study：通常并入 `4 Grammar and Expression`。
 - Project：通常并入 `6 Writing Task`，并保持纸质完成提示。
 - Wrap Up / Big Question：通常并入 `7 Wrap-Up` 的总结卡和自检句，不要再额外新增一个普通 `Wrap Up` 大段。
+
+## OD1 Unit 知识清单到网页的标准 SOP
+
+本 SOP 适用于后续 OD1 Unit 5–10 以及同类知识清单。目标是把 Word 中的教学信息转为与 OD2 一致的 7 段式 iPad 互动课件，同时严格区分原始归档、网页内容和运行时图片。
+
+### 1. 接收与归档输入
+
+每个 Unit 至少需要：
+
+- 一份知识清单 Word：`OD1-UnitX 知识清单.docx`。
+- 一张最终 Reading 思维导图；如果暂未提供，可以先保留第 3 段位置，但交付前优先补齐。
+- Unit 编号、英文标题和必要的特殊说明。
+
+收到文件后：
+
+1. 建立 `content/od1/unit-{NN}/`。
+2. 把 Word 移入该目录，不要长期放在 `tools/`、`public/` 或项目根目录。
+3. 把用户提供的原始思维导图保存在该目录，推荐命名为 `mind_map.png`。
+4. `public/` 中只放网页真正会加载的运行时资源。
+
+### 2. 原始 Word 提取
+
+使用现有工具提取 Word：
+
+```bash
+python tools/extract_docx.py "content/od1/unit-05/OD1-Unit5 知识清单.docx"
+```
+
+提取结果保存在 Word 同级的 `*_extracted/` 目录：
+
+- `content.md`：完整原始文字和表格转写。
+- `images/`：Word 内嵌图片。
+
+`content.md` 是原始归档，不是可以直接复制进网页的最终稿。自动提取可以保留 Word 中的所有栏目，但制作 OD1 网页时必须再执行一次人工内容筛选。
+
+### 3. 分情况筛选内容
+
+| Word 内容 | 网页处理方式 |
+| --- | --- |
+| Unit 标题、学习目标 | 提炼为 Hero 标题和一句简短 Unit goal |
+| 主词汇、主短语 | 放入 `1 Key Vocabulary`；主短语只在服务主阅读或语法时保留 |
+| Reading Skill、文章主旨、情节步骤、重点句型 | 提炼为 `2 Knowledge List Guide` 的 3–4 张短卡 |
+| 课文复述、Reading 思维导图 | 放入 `3 Mind Map Workshop` |
+| 核心语法规则、肯定/否定/疑问句 | 放入 `4 Grammar and Expression` |
+| 主词汇、主阅读或语法可形成的单一练习 | 放入 `5 Challenge Practice` |
+| Writing 范文、大小写、标点、句型框架 | 转写到 `6 Writing Task` |
+| 本课可达成目标 | 回收到 `7 Wrap-Up` |
+| Listening 单词、听力原文、听力题 | OD1 页面完全不提取、不转写、不使用 |
+| Speaking 对话、口语补充句型 | OD1 页面完全不提取、不转写、不使用 |
+
+特别注意：
+
+- Challenge 不得从 Listening / Speaking 中取词、取句或改写题目。
+- 如果 Writing 示例误用了 Listening / Speaking 中的人物或宠物，必须改回主阅读、主语法或真实 Writing 栏内容。
+- Word 中的“课文复述”图片可能只是旧版思维导图。用户提供了新版 `mind_map.png` 时，以新版为准。
+- 自动提取稿里保留 Listening / Speaking 不算网页内容错误，但正式 HTML 和运行时资源中不得出现这些内容。
+
+### 4. 判断 Word 内嵌图片是否可用
+
+查看 `*_extracted/images/` 中每张图，并按用途分类：
+
+- 真正的词汇识图、Reading 思维导图：可以作为候选学习资源。
+- 主要由文字、表格、横线或题目组成的截图：不得直接嵌入，应转写为 HTML 卡片、规则、范文或句型框架。
+- Writing 横线区：不嵌入网页，不制作网页手写区；只保留范文、结构提示和纸质提交说明。
+- 旧思维导图：保留在 `content/` 归档，不覆盖用户更新的最终思维导图。
+
+使用图片前必须检查清晰度、文字正确性、方向、裁切和内容是否与当前 Unit 一致。
+
+### 5. 词汇缺图时的处理
+
+如果 Word 没有可用的主词汇图：
+
+1. 在 `content/od1/unit-{NN}/image-prompts.md` 保存最终生成提示词。
+2. 提示词使用 `scientific-educational` 场景，明确图片用于少儿英语 iPad 词汇工作纸。
+3. 优先生成一张横向 3×3 或结构清晰的词汇图；每格只表达一个概念。
+4. 图片使用明亮手绘教材风、粗轮廓、白底、充足留白。
+5. 默认不在生成图中加入单词、字母、数字或标签，词汇文字由 HTML 提供。
+6. 生成图必须无水印、无品牌、无无关装饰、无裁切主体。
+7. 最终图片复制到 `public/units/od1/unit-{NN}/assets/images/vocabulary.png` 或 `vocabulary.webp`。
+8. 生成后目视检查每一格是否与目标词一致；错误或歧义明显时重新生成。
+
+如果已有合格词汇图片，直接使用并保留来源，不为追求统一而重复生成。
+
+### 6. 思维导图处理
+
+- 原始文件保存在 `content/od1/unit-{NN}/mind_map.png`。
+- 网页运行时副本放在 `public/units/od1/unit-{NN}/assets/images/mind-map.png`。
+- 第 3 段必须包含真实思维导图、准确的 `alt`、简短图注和 3–5 个复述提示词。
+- 不要把思维导图内容重新拆成新的完整 section。
+- 用户更新思维导图时，保留 `content/` 原稿，并同步替换运行时副本。
+
+### 7. 映射为 OD2 七段式页面
+
+先运行脚手架：
+
+```bash
+python tools/create_unit.py od1 5 "Unit title"
+```
+
+然后严格按以下结构制作：
+
+1. `1 Key Vocabulary`：词汇图 + 主词汇点击/拖拽分类；同时支持点击选择后点击投放。
+2. `2 Knowledge List Guide`：Reading Skill、主旨、人物/步骤/关键信息卡。
+3. `3 Mind Map Workshop`：真实思维导图 + 复述提示。
+4. `4 Grammar and Expression`：规则卡 + 短例句，不嵌入语法截图。
+5. `5 Challenge Practice`：只保留一个统一互动练习，内容来自主词汇、阅读或语法。
+6. `6 Writing Task`：HTML 范文 + 3–4 条句型框架 + 纸上手写提交提示。
+7. `7 Wrap-Up`：约 4 条 `I can ...` 自检句，回收 Words / Reading / Grammar / Writing。
+
+顶部学习地图固定为 `Words`、`Reading`、`Grammar`、`Writing`。不要新增 Listening、Speaking、Communicate、Project 或普通 Wrap Up 大段。
+
+### 8. 页面实现要求
+
+- 页面继续使用单文件 HTML，CSS 内联，JS 放在底部。
+- 页面最大宽度约 `900px`，兼容 safe area，手机端收成单列。
+- 图片使用相对路径 `assets/images/...`，不得引用 `content/`、`*_extracted/` 或 `source-pages/`。
+- 拖拽活动必须有触屏点击替代路径。
+- 可投放区支持键盘聚焦；反馈使用 `aria-live="polite"`。
+- 每个练习提供 `Check Answers`、`Start Over` 和即时结果。
+- Writing 不使用 `canvas`、`textarea` 或网页横线手写区。
+- 新 Unit 完成后，把 `public/levels/od-level-1.html` 对应卡片改为正式链接和真实标题。
+
+### 9. 必做校验
+
+完成页面后依次执行：
+
+```bash
+python tools/validate_units.py
+rg -n "Listen & Speak|Listening|Speaking|source-pages|_extracted" public/units/od1/unit-05 -g "*.html"
+rg -n "<h2|assets/images/mind-map|assets/images/vocabulary" public/units/od1/unit-05/index.html
+```
+
+验收时确认：
+
+- 标准 7 个标题数量和顺序正确。
+- 页面不存在 Listening / Speaking 内容。
+- 词汇图和思维导图均能从本地打开。
+- 所有本地 `src` / `href` 指向存在文件。
+- 词汇拖拽可用鼠标、触屏点击和键盘完成。
+- Challenge 每题只有一个正确答案，检查和重置逻辑有效。
+- iPad 和手机宽度无横向滚动、遮挡和文字重叠。
+- Writing 只引导纸质书写。
+- Wrap-Up 与本 Unit 的实际学习目标一致。
+
+### 10. 每个 Unit 的标准交付物
+
+```text
+content/od1/unit-{NN}/
+├─ OD1-UnitX 知识清单.docx
+├─ OD1-UnitX 知识清单_extracted/
+├─ mind_map.png
+└─ image-prompts.md              # 仅在需要生成图片时创建
+
+public/units/od1/unit-{NN}/
+├─ index.html
+└─ assets/images/
+   ├─ vocabulary.png|webp
+   └─ mind-map.png|webp
+```
+
+如果某项资源确实不需要，允许省略对应文件；但 HTML 中不得保留失效引用、占位按钮、死代码或“稍后补充”文案。
+
 
 ## 代码实现约束
 
@@ -289,7 +461,7 @@ Hero 和 Wrap-Up 是页面情绪锚点：
 生成或修改新 Unit 页面时，必须特别避免以下已出现过的问题：
 
 - 不要在 Unit 12 模板主线之外随意新增完整学习模块。例如 Unit 3 不应新增独立的 `Listening Clues` 大段；听力词汇可作为词汇补充或不放入页面，页面主线仍应贴近 Words / Reading / Mind Map / Grammar / Practice / Writing / Wrap-Up。
-- 思维导图是核心学习资源，类似 `public/units/3/unit-03-mind-map.png` 的 mind map 图片必须保留。删除辅助复述截图时，不要误删 mind map 区块。
+- 思维导图是核心学习资源，类似 `public/units/od2/unit-03/assets/images/mind-map.webp` 的 mind map 图片必须保留。删除辅助复述截图时，不要误删 mind map 区块。
 - 语法和作文模块如果素材图片主要是文字题目或表格，应提取为 HTML 文本、表格、卡片和句型框架，不要直接嵌入整张文字截图。词汇图、思维导图等真正服务识图和复述的图片可以保留。
 - 对照 Unit 12 模板时，先核对段落数量、编号和导航锚点，再处理局部素材。删除模块后必须同步清理对应 JS 初始化、按钮 id、报告区 id 和导航目标，避免残留死代码。
 - 写作模块仍然只引导纸质手写提交，不要加入网页内书写板或把图片里的横线作文区域原样嵌入。

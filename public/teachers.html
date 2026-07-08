@@ -26,17 +26,22 @@
 .site-floating-wrap{display:contents;}
 .site-float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}
 .site-float-left{left:18px;top:214px;}
-.site-float-right{right:18px;top:204px;}
+
 .site-float-panel h3{text-align:center;font-family:var(--display-font,'Baloo 2','PingFang SC','Microsoft YaHei',sans-serif);font-size:16px;font-weight:900;color:rgb(192,136,128);margin:0;}
 .site-float-panel p{margin-top:6px;text-align:center;color:var(--soft,var(--duo-text-soft,#777));font-size:12px;font-weight:900;line-height:1.35;}
 .site-qr-box{width:102px;height:102px;margin:10px auto 8px;border:6px solid #fff;border-radius:14px;background:#fff;box-shadow:0 0 0 2px rgba(248,200,208,.72);object-fit:cover;}
-.site-consult-list{display:grid;gap:8px;margin-top:10px;}
-.site-consult-item{min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(248,200,208,.14);font-size:14px;font-weight:900;transition:transform .16s ease,background .16s ease,box-shadow .16s ease;}
-.site-consult-item:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(192,136,128,.12);background:rgba(248,200,208,.26);}
-.site-consult-item.active{background:rgba(248,200,208,.42);color:var(--text,var(--duo-text,#4B4B4B));}
-.site-consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
-@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-float-right .site-consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.site-qr-box{width:112px;height:112px;}}
-@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}.site-float-right .site-consult-list{grid-template-columns:minmax(0,1fr);}}
+
+
+
+
+
+@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:minmax(0,1fr);gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-qr-box{width:112px;height:112px;}}
+@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}}
+
+.page{max-width:1080px}.hero p{max-width:720px}.hero-tags{position:relative;z-index:2;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}.hero-tags span{padding:6px 11px;border:2px solid rgba(255,255,255,.78);border-radius:999px;background:rgba(255,255,255,.22);font-size:14px;font-weight:900}.section-head{margin-top:34px}.section-head h2{font-family:var(--display-font);font-size:32px;line-height:1.15;font-weight:900}.section-head p{max-width:760px;margin-top:7px;color:var(--soft);font-size:16px;font-weight:800}.grid.overview{margin-top:16px}.overview .card{padding:16px}.overview .avatar{width:62px;height:62px;font-size:25px}.overview .card h3{margin-top:10px;font-family:var(--display-font);font-size:21px;font-weight:900}.overview .card p{margin-top:5px;font-size:15px;font-weight:800;color:var(--soft)}
+.teacher-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}.teacher-card{min-width:0;border:2px solid var(--border);border-bottom-width:4px;border-radius:18px;background:#fff;padding:18px;box-shadow:0 5px 0 rgba(7,81,191,.04)}.teacher-head{display:grid;grid-template-columns:68px minmax(0,1fr);gap:13px;align-items:center}.teacher-avatar{width:68px;height:68px;display:grid;place-items:center;border:2px solid var(--border);border-bottom-width:4px;border-radius:18px;background:var(--pink-light);color:var(--pink-deep);font-family:var(--display-font);font-size:24px;font-weight:900}.teacher-card:nth-child(3n+2) .teacher-avatar{background:#fff1c9;color:#8a6400}.teacher-card:nth-child(3n) .teacher-avatar{background:var(--mint);color:#087b70}.teacher-name{font-family:var(--display-font);font-size:24px;line-height:1.1;font-weight:900}.teacher-role{margin-top:4px;color:var(--sky-deep);font-size:14px;font-weight:900}.credentials{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.credentials span{display:inline-flex;padding:5px 9px;border:2px solid var(--border);border-radius:999px;background:var(--cream);font-size:13px;font-weight:900;line-height:1.25}.teacher-focus{margin-top:13px;color:var(--text);font-size:15px;font-weight:800}.teacher-focus strong{color:var(--pink-deep)}.teacher-card details{margin-top:12px;border-top:2px dashed var(--border);padding-top:10px}.teacher-card summary{min-height:44px;display:flex;align-items:center;color:var(--sky-deep);font-size:14px;font-weight:900;cursor:pointer;touch-action:manipulation}.teacher-card summary::after{content:'＋';margin-left:auto;font-size:20px}.teacher-card details[open] summary::after{content:'－'}.teacher-card details p{padding:4px 0 2px;color:var(--soft);font-size:14px;font-weight:800;line-height:1.75}.support-list{margin-top:32px}.support-list .chips{position:relative;z-index:1}.source-note{margin-top:18px;color:var(--soft);font-size:13px;font-weight:800;text-align:center}
+.teacher-card summary{list-style:none}.teacher-card summary::-webkit-details-marker{display:none}
+@media(max-width:820px){.teacher-grid{grid-template-columns:minmax(0,1fr)}.section-head h2{font-size:28px}}@media(max-width:480px){.teacher-card{padding:15px}.teacher-head{grid-template-columns:58px minmax(0,1fr)}.teacher-avatar{width:58px;height:58px;font-size:21px}.teacher-name{font-size:22px}.hero-tags{gap:6px}.hero-tags span{font-size:12px}}
 
 </style>
 </head>
@@ -48,25 +53,56 @@
     </header>
     <section class="hero">
       <h1>师资力量</h1>
-      <p>中外教联合授课，教研团队同步设计。</p>
+      <p>中外双教协作，让原版输入真正走向阅读、写作与表达输出。</p>
+      <div class="hero-tags" aria-label="师资特色"><span>中外双教</span><span>原版输入</span><span>表达输出</span><span>分级进阶</span><span>教研支持</span></div>
     </section>
-    <section class="grid">
-      <article class="card"><div class="avatar">外</div><h2>全球外教课堂</h2><p>通过真实交流场景训练听说反应，帮助孩子敢开口、说完整、能互动。</p></article>
-      <article class="card"><div class="avatar">中</div><h2>中教学习支持</h2><p>用孩子能理解的方式拆解词汇、阅读策略和写作框架，课堂任务更清楚。</p></article>
-      <article class="card"><div class="avatar">研</div><h2>教研内容设计</h2><p>围绕 Oxford Discover 主题安排预习、练习、复述和纸质输出，形成稳定学习闭环。</p></article>
-    </section>
-    <section class="list">
-      <div>
-        <h2>课堂支持重点</h2>
-        <div class="chips">
-          <span class="chip">分级阅读引导</span>
-          <span class="chip">主题词汇复现</span>
-          <span class="chip">口语表达纠正</span>
-          <span class="chip">纸质写作反馈</span>
-          <span class="chip">阶段学习规划</span>
-        </div>
+
+    <section aria-labelledby="model-title">
+      <div class="section-head"><h2 id="model-title">一支团队，多维支持</h2><p>根据孩子的学习阶段，由原版英语教师、专项教师与教研团队共同支持课堂。</p></div>
+      <div class="grid overview">
+        <article class="card"><div class="avatar">外</div><h3>真实语言输入</h3><p>用自然语音、真实语境和跨文化内容训练听说反应与表达信心。</p></article>
+        <article class="card"><div class="avatar">中</div><h3>学习难点拆解</h3><p>把词汇、阅读策略、语法和写作框架讲清楚，并提供及时反馈。</p></article>
+        <article class="card"><div class="avatar">研</div><h3>课程路径设计</h3><p>围绕 Oxford Discover 主题衔接预习、互动练习、复述与纸质输出。</p></article>
       </div>
     </section>
+
+    <section aria-labelledby="team-title">
+      <div class="section-head"><h2 id="team-title">认识教师团队</h2><p>点击“查看详细介绍”可了解教师背景与教学经验。课堂安排将结合孩子的年龄、基础和学习目标进行匹配。</p></div>
+      <div class="teacher-grid">
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Se</div><div><h3 class="teacher-name">Serena 老师</h3><p class="teacher-role">原版英语 · OD 教学 · PBL 项目制</p></div></div><div class="credentials"><span>UC Berkeley 硕士</span><span>儿童早期学习与政策</span><span>课程设计</span></div><p class="teacher-focus"><strong>教学方向：</strong>少儿英语课程设计、中美教育体系比较与项目制学习。</p><details><summary>查看详细介绍</summary><p>UC Berkeley 硕士，持有加州儿童早期学习与政策研究证书，具备少儿英语课程设计与 PBL 项目制教学经验。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Fr</div><div><h3 class="teacher-name">Freya 老师</h3><p class="teacher-role">原版英语 · OD 教学</p></div></div><div class="credentials"><span>麦吉尔大学本硕</span><span>雅思 8 分</span><span>GMAT 740</span></div><p class="teacher-focus"><strong>教学方向：</strong>原版英语学习、课堂互动与系统能力提升。</p><details><summary>查看详细介绍</summary><p>拥有 12 年北美学习与工作经历，曾任头部教育机构教师；累计教授超百名学生，线上课程播放超百万。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Ky</div><div><h3 class="teacher-name">Kyle 老师</h3><p class="teacher-role">原版英语 · 外刊拓展</p></div></div><div class="credentials"><span>复旦大学本科</span><span>芝加哥大学硕士</span><span>托福 116</span></div><p class="teacher-focus"><strong>教学方向：</strong>外刊阅读、国际视野与生涯发展认知。</p><details><summary>查看详细介绍</summary><p>托福 116 分，其中三项满分；曾任复旦哈佛中美青年领袖对话组长，擅长使用《经济学人》等外刊拓展学习主题。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Co</div><div><h3 class="teacher-name">Coco 老师</h3><p class="teacher-role">原版英语 · 综合提升</p></div></div><div class="credentials"><span>杜克大学硕士</span><span>雅思 8 分</span><span>多感官课堂</span></div><p class="teacher-focus"><strong>教学方向：</strong>学习痛点诊断、互动课堂与小学高年级英语。</p><details><summary>查看详细介绍</summary><p>具备小学高年级课外英语与成人英语教学经验，注重发现学习障碍，以互动性强、参与度高的课堂帮助学生理解和运用语言。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Da</div><div><h3 class="teacher-name">Daisy 老师</h3><p class="teacher-role">语法阅读 · 应试衔接</p></div></div><div class="credentials"><span>一线教学 5 年</span><span>高中教师资格证</span><span>雅思 8 分</span></div><p class="teacher-focus"><strong>教学方向：</strong>英语基础素养、小初衔接与考试策略。</p><details><summary>查看详细介绍</summary><p>拥有苏州初中一线教学经验，英语专业四级、八级成绩优秀；兼顾听说读写基础与小升初、中高考英语考点。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">An</div><div><h3 class="teacher-name">Annie 老师</h3><p class="teacher-role">原版英语 · 国际课程</p></div></div><div class="credentials"><span>Ivey Business School</span><span>托福 114</span><span>10 年北美经历</span></div><p class="teacher-focus"><strong>教学方向：</strong>原版英语学习与国际课程路径衔接。</p><details><summary>查看详细介绍</summary><p>西安大略大学 Ivey Business School 本硕连读，熟悉中西教育差异及语言学习路径，注重帮助学生适应国际化学习方式。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Yi</div><div><h3 class="teacher-name">Yiyi 老师</h3><p class="teacher-role">口语表达 · 原版输入</p></div></div><div class="credentials"><span>多伦多大学</span><span>雅思 8 分</span><span>5 年教学经验</span></div><p class="teacher-focus"><strong>教学方向：</strong>儿童表达成长、口语信心与跨文化沟通。</p><details><summary>查看详细介绍</summary><p>拥有十年北美学习与工作经历，教学温柔耐心，擅长为内向、害羞的孩子建立安全而自在的表达氛围。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Ha</div><div><h3 class="teacher-name">Haodong 老师</h3><p class="teacher-role">国际课程 · 学术英语</p></div></div><div class="credentials"><span>爱丁堡大学</span><span>一等荣誉学位</span><span>GRE 339</span></div><p class="teacher-focus"><strong>教学方向：</strong>题目语言理解、阅读速度与学术写作表达。</p><details><summary>查看详细介绍</summary><p>具备多年教学经验，擅长培养 A-Level 学生的审题能力，帮助学生适应国际课程节奏和学术表达要求。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Ge</div><div><h3 class="teacher-name">Geoffrey 老师</h3><p class="teacher-role">口语表达 · 原版输入</p></div></div><div class="credentials"><span>John Molson 商学院</span><span>CELTA 认证</span><span>6 年+ 教学</span></div><p class="teacher-focus"><strong>教学方向：</strong>少儿及青少年口语训练与表达能力提升。</p><details><summary>查看详细介绍</summary><p>拥有 CELTA 英语教学认证，曾参与欧洲多语种口语研究项目，注重通过系统训练改善口语表达。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Ju</div><div><h3 class="teacher-name">Junho 老师</h3><p class="teacher-role">原版英语 · 国际视野</p></div></div><div class="credentials"><span>英语第一语言</span><span>Western University</span><span>多语背景</span></div><p class="teacher-focus"><strong>教学方向：</strong>北美语言环境、跨文化学习与自然英文表达。</p><details><summary>查看详细介绍</summary><p>在加拿大完成小学至大学教育，曾赴香港大学交流，并进修法语语言学；具备英语、法语、韩语与西班牙语背景。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">He</div><div><h3 class="teacher-name">Hefzi 老师</h3><p class="teacher-role">原版英语 · 阅读表达</p></div></div><div class="credentials"><span>英语第一语言</span><span>公共关系荣誉学士</span><span>艺术史背景</span></div><p class="teacher-focus"><strong>教学方向：</strong>阅读理解、文化叙事与跨文化沟通。</p><details><summary>查看详细介绍</summary><p>在加拿大完成小学至大学教育，拥有公共关系及艺术史学习背景，并能使用西班牙语，关注文学、视觉艺术与文化表达。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Zo</div><div><h3 class="teacher-name">Zoe 老师</h3><p class="teacher-role">语法系统 · 阅读写作</p></div></div><div class="credentials"><span>香港大学硕士</span><span>雅思 7.5</span><span>教师资格证</span></div><p class="teacher-focus"><strong>教学方向：</strong>小学语法系统、句子模型与小初衔接。</p><details><summary>查看详细介绍</summary><p>持有英语专业四级、八级证书，擅长从句子成分和基本句型入手，通过练习与即时纠错，把语法从“会背”转化为“会用”。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Wi</div><div><h3 class="teacher-name">William 老师</h3><p class="teacher-role">商业英语 · 演讲表达</p></div></div><div class="credentials"><span>Ventrim Sciences</span><span>创业与品牌增长</span><span>商业案例</span></div><p class="teacher-focus"><strong>教学方向：</strong>商业案例阅读、科技主题与有内容的英语表达。</p><details><summary>查看详细介绍</summary><p>具备风险投资、市场研究及创业项目经验，关注医疗健康、人工智能、网络安全与科技创新，擅长把真实案例带入英语课堂。</p></details></article>
+
+        <article class="teacher-card"><div class="teacher-head"><div class="teacher-avatar">Hr</div><div><h3 class="teacher-name">Herry 老师</h3><p class="teacher-role">英语辩论 · 演讲赛事</p></div></div><div class="credentials"><span>7 年+ 英语辩论</span><span>全国金奖</span><span>WSDA 裁判</span></div><p class="teacher-focus"><strong>教学方向：</strong>PF、BP、OO、即兴辩论与演讲赛事训练。</p><details><summary>查看详细介绍</summary><p>曾任中国人民大学英语辩论队队长、教练，拥有 3 年+ 裁判经历，执裁多项赛事；兼具辩手、教练与裁判视角。</p></details></article>
+      </div>
+    </section>
+
+    <section class="list support-list">
+      <div><h2>课堂支持重点</h2><div class="chips"><span class="chip">OD 原版英语</span><span class="chip">分级阅读引导</span><span class="chip">主题词汇复现</span><span class="chip">口语表达训练</span><span class="chip">语法系统搭建</span><span class="chip">纸质写作反馈</span><span class="chip">国际课程衔接</span><span class="chip">演讲与辩论</span></div></div>
+    </section>
+    <p class="source-note">教师信息根据现有师资资料整理，具体授课安排以课程匹配为准。</p>
   </main>
 
   <aside class="site-floating-wrap" aria-label="咨询入口">
@@ -74,14 +110,6 @@
       <h3>扫码咨询</h3>
       <img class="site-qr-box" src="assets/images/serena-wechat-qr-crop.webp" alt="Serena 老师微信二维码">
       <p>添加老师，领取试听课和学习规划。</p>
-    </div>
-    <div class="site-float-panel site-float-right">
-      <h3>咨询窗口</h3>
-      <div class="site-consult-list">
-        <a class="site-consult-item active" href="#">在线咨询</a>
-        <a class="site-consult-item" href="teachers.html">师资介绍</a>
-        <a class="site-consult-item" href="courses.html">课程体系</a>
-      </div>
     </div>
   </aside>
 </body>
