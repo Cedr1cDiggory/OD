@@ -38,15 +38,15 @@ img{display:block;max-width:100%;height:auto;}
 .site-floating-wrap{display:contents;}
 .site-float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}
 .site-float-left{left:18px;top:214px;}
-.site-float-right{right:18px;top:204px;}
+
 .site-float-panel h3{text-align:center;font-family:var(--display-font,'Baloo 2','PingFang SC','Microsoft YaHei',sans-serif);font-size:16px;font-weight:900;color:rgb(192,136,128);margin:0;}
 .site-float-panel p{margin-top:6px;text-align:center;color:var(--soft,var(--duo-text-soft,#777));font-size:12px;font-weight:900;line-height:1.35;}
 .site-qr-box{width:102px;height:102px;margin:10px auto 8px;border:6px solid #fff;border-radius:14px;background:#fff;box-shadow:0 0 0 2px rgba(248,200,208,.72);object-fit:cover;}
-.site-consult-list{display:grid;gap:8px;margin-top:10px;}
-.site-consult-item{min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(248,200,208,.14);font-size:14px;font-weight:900;transition:transform .16s ease,background .16s ease,box-shadow .16s ease;}
-.site-consult-item:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(192,136,128,.12);background:rgba(248,200,208,.26);}
-.site-consult-item.active{background:rgba(248,200,208,.42);color:var(--text,var(--duo-text,#4B4B4B));}
-.site-consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
-@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-float-right .site-consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.site-qr-box{width:112px;height:112px;}}
-@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}.site-float-right .site-consult-list{grid-template-columns:minmax(0,1fr);}}
+
+
+
+
+
+@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:minmax(0,1fr);gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-qr-box{width:112px;height:112px;}}
+@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}}
 

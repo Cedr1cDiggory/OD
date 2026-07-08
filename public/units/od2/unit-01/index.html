@@ -17,21 +17,21 @@
     .pronoun-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}.pronoun-legend span{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:900;color:var(--duo-text-soft);}.pronoun-legend b{display:inline-flex;align-items:center;justify-content:center;min-width:32px;height:28px;border-radius:999px;background:var(--duo-blue-light);color:var(--duo-blue-dark);}.pronoun-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;}.pronoun-pair{min-width:0;border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-sm);background:#fff;text-align:center;overflow:hidden;}.pronoun-pair strong,.pronoun-pair span{display:block;padding:9px 4px;font-size:16px;font-weight:900;}.pronoun-pair strong{background:var(--duo-blue-light);color:var(--duo-blue-dark);}.pronoun-pair span{border-top:2px solid var(--duo-border);color:var(--duo-purple-dark);}.writing-questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.writing-question{border:2px solid var(--duo-border);border-bottom-width:4px;border-radius:var(--radius-sm);background:var(--duo-bg-soft);padding:12px 14px;}.writing-question strong{display:block;color:var(--duo-blue-dark);font-size:15px;font-weight:900;margin-bottom:4px;}.writing-question span{display:block;color:var(--duo-text);font-size:15px;font-weight:800;}.model-card .b p{margin:0;color:var(--duo-text);font-size:16px;font-weight:800;line-height:1.75;}.target-word{display:inline-flex;border-radius:8px;background:var(--duo-pink);color:#fff;padding:1px 6px;font-weight:900;line-height:1.2;white-space:nowrap;}.write-helper{font-weight:800;margin-bottom:12px;color:var(--duo-text);}
 .site-float-panel{position:fixed;z-index:30;width:142px;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(255,255,255,.94);padding:12px;box-shadow:0 10px 22px rgba(192,136,128,.12);}
 .site-float-left{left:18px;top:214px;}
-.site-float-right{right:18px;top:204px;}
+
 .site-float-panel h3{text-align:center;font-family:var(--display-font,'Baloo 2','PingFang SC','Microsoft YaHei',sans-serif);font-size:16px;font-weight:900;color:rgb(192,136,128);margin:0;}
 .site-float-panel p{margin-top:6px;text-align:center;color:var(--soft,var(--duo-text-soft,#777));font-size:12px;font-weight:900;line-height:1.35;}
 .site-qr-box{width:102px;height:102px;margin:10px auto 8px;border:6px solid #fff;border-radius:14px;background:#fff;box-shadow:0 0 0 2px rgba(248,200,208,.72);object-fit:cover;}
-.site-consult-list{display:grid;gap:8px;margin-top:10px;}
-.site-consult-item{min-height:48px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:inherit;border:2px solid rgba(248,200,208,.72);border-bottom-width:3px;border-radius:12px;background:rgba(248,200,208,.14);font-size:14px;font-weight:900;transition:transform .16s ease,background .16s ease,box-shadow .16s ease;}
-.site-consult-item:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(192,136,128,.12);background:rgba(248,200,208,.26);}
-.site-consult-item.active{background:rgba(248,200,208,.42);color:var(--text,var(--duo-text,#4B4B4B));}
-.site-consult-item:active{transform:translateY(2px);border-bottom-width:2px;box-shadow:none;}
-@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr 1fr;gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-float-right .site-consult-list{grid-template-columns:repeat(3,minmax(0,1fr));}.site-qr-box{width:112px;height:112px;}}
-@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}.site-float-right .site-consult-list{grid-template-columns:minmax(0,1fr);}}
+
+
+
+
+
+@media(max-width:1280px){.site-floating-wrap{max-width:1100px;margin:24px auto 0;padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));display:grid;grid-template-columns:minmax(0,1fr);gap:14px;}.site-float-panel{position:static;width:auto;box-shadow:none;}.site-qr-box{width:112px;height:112px;}}
+@media(max-width:560px){.site-floating-wrap{grid-template-columns:minmax(0,1fr);}}
 @media(max-width:700px){.pronoun-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.writing-questions{grid-template-columns:minmax(0,1fr);}}
 @media(max-width:430px){.pronoun-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 
-</style>
+.practice-part-title{margin-top:18px;color:var(--duo-blue-dark,var(--blue-deep,var(--deep,#168f9c)));font-size:21px;font-weight:900}.practice-part-title+.questions,.practice-part-title+.sentence-list{margin-top:10px}</style>
 </head>
 <body>
 <div class="page" id="top">
@@ -150,15 +150,13 @@
     <div class="card">
       <div class="h">Pronoun Drag-and-Drop</div>
       <div class="b">
-        <div class="bank drop-zone" id="pronounBank" data-zone="bank"></div>
-        <div class="sentence-list" id="pronounChallenge" style="margin-top:16px;">
+        <div class="bank drop-zone" id="pronounBank" data-zone="bank"></div><div class="practice-part-title">Part A · Core Practice</div><div class="sentence-list" id="pronounChallenge" style="margin-top:16px;">
           <div class="sentence">Birds have wings. <span class="blank" data-answer="they" data-placeholder="pronoun"></span> can fly.</div>
           <div class="sentence">A fish has gills. <span class="blank" data-answer="it" data-placeholder="pronoun"></span> can breathe in water.</div>
           <div class="sentence">Mammals have hair or fur. Hair keeps <span class="blank" data-answer="them" data-placeholder="pronoun"></span> warm.</div>
           <div class="sentence">This is my favorite animal group. I like <span class="blank" data-answer="it" data-placeholder="pronoun"></span>.</div>
-        </div>
-        <div class="actions"><button class="btn-main" id="pronounCheckBtn">Check Pronouns</button><button class="btn-sub" id="pronounResetBtn">Start Over</button></div>
-        <div class="report" id="pronounReport">Left to finish: 4 (done 0 / 4)</div>
+        <div class="practice-part-title">Part B · Pronoun Power</div><div class="sentence">Mia studies rabbits. <span class="blank" data-answer="she" data-placeholder="phrase"></span> likes them.</div><div class="sentence">Ben watches birds. Mia watches with <span class="blank" data-answer="him" data-placeholder="phrase"></span>.</div><div class="sentence">The lions are strong. I can see <span class="blank" data-answer="them" data-placeholder="phrase"></span>.</div></div><div class="actions"><button class="btn-main" id="pronounCheckBtn">Check Pronouns</button><button class="btn-sub" id="pronounResetBtn">Start Over</button></div>
+        <div class="report" id="pronounReport">Left to finish: 7 (done 0 / 7)</div>
       </div>
     </div>
   </section>
@@ -265,7 +263,7 @@
   function initBlanks(){
     const bank=document.getElementById('pronounBank'),report=document.getElementById('pronounReport'),check=document.getElementById('pronounCheckBtn'),reset=document.getElementById('pronounResetBtn');
     if(!bank||!report||!check||!reset)return;
-    const data=['they','it','them','it'].map((text,i)=>({text,id:'pro'+i,target:text}));
+    const data=['they','it','them','it','she','him','them'].map((text,i)=>({text,id:'pro'+i,target:text}));
     const chips=data.map(d=>chipText(d.text,d.id,d.target,'blank'));
     chips.forEach(chip=>chip.dataset.group='pronoun');
     const blanks=[...document.querySelectorAll('#pronounChallenge .blank')];
@@ -293,14 +291,6 @@
       <h3>扫码咨询</h3>
       <img class="site-qr-box" src="../../../assets/images/serena-wechat-qr-crop.webp" alt="Serena 老师微信二维码">
       <p>添加老师，领取试听课和学习规划。</p>
-    </div>
-    <div class="site-float-panel site-float-right">
-      <h3>咨询窗口</h3>
-      <div class="site-consult-list">
-        <a class="site-consult-item active" href="#top">在线咨询</a>
-        <a class="site-consult-item" href="../../../teachers.html">师资介绍</a>
-        <a class="site-consult-item" href="../../../courses.html">课程体系</a>
-      </div>
     </div>
   </aside>
 </body>
