@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>课程解锁 | 兔兔鸭国际英语</title>
+  <style>
+    @import url('https://fonts.loli.net/css2?family=Baloo+2:wght@600;700;800;900&family=Nunito:wght@700;800;900&display=swap');
+
+    :root {
+      --sky: #73d1df;
+      --blue: #0878d6;
+      --deep: #173b62;
+      --soft: #51708f;
+      --border: #9ed9ec;
+      --pink: #f8b7d0;
+      --green: #58cc02;
+      --yellow: #ffce59;
+      --paper: #fff8f0;
+      --display-font: 'Baloo 2', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at 18px 18px, rgba(248, 183, 208, .18) 0 3px, transparent 3.5px), radial-gradient(circle at 58px 48px, rgba(115, 209, 223, .15) 0 2.5px, transparent 3px), linear-gradient(180deg, #fff8f0 0%, #eefbff 100%);
+      background-size: 84px 84px, 96px 96px, auto;
+      color: var(--deep);
+      font-family: 'Nunito', 'Baloo 2', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px max(16px, env(safe-area-inset-right)) 72px max(16px, env(safe-area-inset-left));
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 0 -16px 16px;
+      padding: 6px 16px;
+      background: rgba(248, 183, 208, .52);
+      border-radius: 0 0 12px 12px;
+    }
+
+    .brand-logo {
+      width: 220px;
+      height: 75px;
+      object-fit: contain;
+    }
+
+    .back {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255, 255, 255, .88);
+      border-bottom-width: 4px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .86);
+      padding: 7px 16px;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--border);
+      border-bottom-width: 4px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #0751bf 0%, #168ee6 52%, #73d1df 100%);
+      padding: 34px;
+      min-height: 310px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 2px dashed rgba(255, 255, 255, .82);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -26px;
+      bottom: -30px;
+      width: min(36vw, 330px);
+      aspect-ratio: 1.5;
+      background: url("assets/images/stickers/tutu-unit-corner.webp") center/contain no-repeat;
+      opacity: .34;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border: 2px solid rgba(255, 255, 255, .82);
+      border-bottom-width: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .45);
+      padding: 7px 14px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h1 {
+      margin-top: 14px;
+      font-family: var(--display-font);
+      font-size: 48px;
+      line-height: 1.1;
+      color: #fff;
+      font-weight: 900;
+      text-shadow: 2px 2px 0 rgba(52, 66, 68, .28);
+    }
+
+    .hero p {
+      margin-top: 12px;
+      color: #fff;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .panel-grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .card {
+      border: 2px solid var(--border);
+      border-bottom-width: 4px;
+      border-radius: 22px;
+      background: #fff;
+      padding: 22px;
+    }
+
+    .card h2 {
+      font-family: var(--display-font);
+      font-size: 28px;
+      line-height: 1.1;
+      font-weight: 900;
+      color: var(--deep);
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: var(--soft);
+      font-weight: 800;
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      border: 2px solid #e5e5e5;
+      border-bottom-width: 4px;
+      border-radius: 18px;
+      background: #fff8f0;
+      padding: 12px;
+    }
+
+    .num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: var(--yellow);
+      border: 2px solid #d9a600;
+      font-family: var(--display-font);
+      font-weight: 900;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .step>div>span {
+      display: block;
+      color: var(--soft);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .qr-card {
+      text-align: center;
+      background: linear-gradient(180deg, #fff 0%, #eaf8ff 100%);
+    }
+
+    .qr-box {
+      width: min(260px, 100%);
+      margin: 16px auto 12px;
+      border: 10px solid #fff;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba(248, 183, 208, .75);
+    }
+
+    .chips {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      border: 2px solid var(--border);
+      border-bottom-width: 4px;
+      border-radius: 999px;
+      background: #fff;
+      padding: 6px 13px;
+      color: var(--deep);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--border);
+      border-bottom-width: 4px;
+      border-radius: 16px;
+      background: #fff;
+      padding: 10px 18px;
+      font-weight: 900;
+    }
+
+    .btn.primary {
+      background: var(--green);
+      border-color: #46a302;
+      color: #fff;
+    }
+
+    .note {
+      margin-top: 18px;
+      border: 2px dashed var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .72);
+      padding: 14px;
+      color: var(--soft);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .site-floating-wrap {
+      display: contents;
+    }
+
+    .site-float-panel {
+      position: fixed;
+      z-index: 30;
+      width: 142px;
+      border: 2px solid rgba(248, 200, 208, .72);
+      border-bottom-width: 3px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .94);
+      padding: 12px;
+      box-shadow: 0 10px 22px rgba(192, 136, 128, .12);
+    }
+
+    .site-float-left {
+      left: 18px;
+      top: 214px;
+    }
+
+    .site-float-panel h3 {
+      text-align: center;
+      font-family: var(--display-font);
+      font-size: 16px;
+      font-weight: 900;
+      color: rgb(192, 136, 128);
+      margin: 0;
+    }
+
+    .site-float-panel p {
+      margin-top: 6px;
+      text-align: center;
+      color: var(--soft);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .site-qr-box {
+      width: 102px;
+      height: 102px;
+      margin: 10px auto 8px;
+      border: 6px solid #fff;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 0 0 2px rgba(248, 200, 208, .72);
+      object-fit: cover;
+    }
+
+    @media(max-width:1280px) {
+      .site-floating-wrap {
+        max-width: 980px;
+        margin: 24px auto 0;
+        padding: 0 max(18px, env(safe-area-inset-right)) 0 max(18px, env(safe-area-inset-left));
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .site-float-panel {
+        position: static;
+        width: auto;
+        box-shadow: none;
+      }
+
+      .site-qr-box {
+        width: 112px;
+        height: 112px;
+      }
+    }
+
+    @media(max-width:760px) {
+      .panel-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding: 26px 16px;
+      }
+
+      .hero h1,
+      h1 {
+        font-size: 36px;
+      }
+
+      .hero::after {
+        width: 230px;
+        right: -82px;
+        bottom: -42px;
+        opacity: .18;
+      }
+
+      .top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .brand-logo {
+        width: 198px;
+        height: 68px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="top">
+      <a class="brand" href="index.html" aria-label="兔兔鸭国际英语首页"><img class="brand-logo"
+          src="assets/images/tutu-logo-official.webp" alt="兔兔鸭国际英语 Play & Learn by TUTU"></a>
+      <a class="back" href="courses.html">返回课程页</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Member Access</span>
+        <h1>解锁正式课程</h1>
+        <p>Unit 1–3 可以直接试看。Unit 4–18 为正式课程内容，请扫码添加售后老师开通访问权限。</p>
+      </div>
+    </section>
+
+    <section class="panel-grid" aria-label="课程解锁说明">
+      <article class="card">
+        <h2>如何开通？</h2>
+        <p>扫码联系售后老师，确认课程级别和购买方式，开通后使用账号密码访问后续单元。</p>
+        <div class="steps">
+          <div class="step"><span class="num">1</span>
+            <div><strong>扫码添加售后老师</strong><span>发送“OD 课程解锁 + 需要的 Level”。</span></div>
+          </div>
+          <div class="step"><span class="num">2</span>
+            <div><strong>确认课程与购买方式</strong><span>售后老师会说明课程范围、价格和付款方式。</span></div>
+          </div>
+          <div class="step"><span class="num">3</span>
+            <div><strong>获得访问账号</strong><span>付款确认后，老师会发送账号密码或开通说明。</span></div>
+          </div>
+          <div class="step"><span class="num">4</span>
+            <div><strong>继续学习 Unit 4–18</strong><span>回到对应 Level 页面，进入正式单元学习。</span></div>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" id="member-login" href="courses.html">已有账号，登录当前单元</a>
+          <a class="btn" href="courses.html">查看课程 Level</a>
+          <a class="btn" href="index.html">返回首页</a>
+        </div>
+      </article>
+
+      <article class="card qr-card">
+        <h2>扫码联系售后</h2>
+        <p>请保存或扫码添加 Serena 老师，获取课程开通帮助。</p>
+        <img class="qr-box" src="assets/images/serena-wechat-qr-crop.webp" alt="Serena 老师微信二维码">
+        <div class="chips" aria-label="解锁范围">
+          <span class="chip">OD课程线上直播</span>
+          <span class="chip">预科资料领取</span>
+          <span class="chip">Level 套餐开通</span>
+          <span class="chip">售后学习支持</span>
+        </div>
+        <p class="note">提示：如果浏览器弹出账号密码窗口，请输入售后老师提供的访问账号。</p>
+      </article>
+    </section>
+  </main>
+
+  <aside class="site-floating-wrap" aria-label="咨询入口">
+    <div class="site-float-panel site-float-left">
+      <h3>扫码咨询</h3>
+      <img class="site-qr-box" src="assets/images/serena-wechat-qr-crop.webp" alt="Serena 老师微信二维码">
+      <p>添加售后老师，开通正式课程访问权限。</p>
+    </div>
+  </aside>
+  <script>
+    (() => {
+      const loginLink = document.getElementById('member-login');
+      const params = new URLSearchParams(window.location.search);
+      const level = params.get('level');
+      const unit = params.get('unit');
+      const validLevel = /^(od1|od2)$/.test(level || '');
+      const validUnit = /^(0[4-9]|1[0-8])$/.test(unit || '');
+
+      if (validLevel && validUnit) {
+        loginLink.href = `units/${level}/unit-${unit}/`;
+        loginLink.textContent = `已有账号，登录 ${level.toUpperCase()} Unit ${Number(unit)}`;
+      } else {
+        loginLink.hidden = true;
+      }
+    })();
+  </script>
+</body>
+
+</html>
